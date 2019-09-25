@@ -10,6 +10,7 @@ const resolveApp = ( relativePath ) => path.resolve( appDirectory, relativePath 
 module.exports = {
   appAssets: resolveApp( 'static/assets' ),
   appDist: resolveApp( 'dist' ),
+  appFavicon: resolveApp( 'static/favicon.png' ),
   appHTML: resolveApp( 'static/index.html' ),
   appIndex: resolveApp( 'src/index.js' ),
   appPackage: resolveApp( 'package.json' ),

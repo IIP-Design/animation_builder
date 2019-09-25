@@ -1,3 +1,4 @@
+const CopyPlugin = require( 'copy-webpack-plugin' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 
 const partials = require( './partials' );
@@ -19,8 +20,14 @@ module.exports = {
     filename: 'gcx-animations.js'
   },
   plugins: [
+    new CopyPlugin( [
+      {
+        from: paths.appAssets,
+        to: `${paths.appDist}/assets`
+      }
+    ] ),
     new HtmlWebpackPlugin( {
-      favicon: `${paths.appAssets}/favicon.png`,
+      favicon: paths.appFavicon,
       partials: [partials.all],
       template: paths.appHTML
     } )
