@@ -1,11 +1,23 @@
-.example-button {
-  background-color: red;
-  color: white;
-  font-size: 15px;
-  padding: 8px;
+.example {
+  &-button {
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  &-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &-image {
+    margin-top: 10px;
+  }
 }
 
-.example-container {
-  display: flex;
-  justify-content: center;
+.hidden {
+  display: none;
 }

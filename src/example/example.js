@@ -2,9 +2,16 @@
 import './example.scss';
 
 const btn = document.getElementById( 'example-button' );
+const img = document.getElementById( 'example-image' );
 
 function sayHello() {
-  alert( 'Hello - JavaScript deployed!' ); // eslint-disable-line no-alert
+  const classes = img.classList;
+
+  if ( classes.contains( 'hidden' ) ) {
+    classes.remove( 'hidden' );
+  } else {
+    classes.add( 'hidden' );
+  }
 }
 
 btn.addEventListener( 'click', sayHello );
