@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 
+const partials = require( './partials' );
 const paths = require( './paths' );
 
 module.exports = {
@@ -30,7 +31,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin( {
-      template: paths.appHTML
+      template: paths.appHTML,
+      partials: [partials.all]
     } )
   ],
   resolve: {
