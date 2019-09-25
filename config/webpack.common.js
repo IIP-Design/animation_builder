@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
+
 const paths = require( './paths' );
 
 module.exports = {
@@ -26,6 +28,11 @@ module.exports = {
     path: paths.appDist,
     filename: 'gcx-animations.js'
   },
+  plugins: [
+    new HtmlWebpackPlugin( {
+      template: paths.appHTML
+    } )
+  ],
   resolve: {
     extensions: [
       '*', '.js', '.jsx'
