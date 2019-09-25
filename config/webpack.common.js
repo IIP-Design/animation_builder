@@ -31,8 +31,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin( {
-      template: paths.appHTML,
-      partials: [partials.all]
+      favicon: `${paths.appAssets}/favicon.png`,
+      partials: [partials.all],
+      template: paths.appHTML
     } )
   ],
   resolve: {
