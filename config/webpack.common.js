@@ -4,6 +4,8 @@ const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 const partials = require( './partials' );
 const paths = require( './paths' );
 
+const joinedPartials = partials.all.join( '' );
+
 module.exports = {
   entry: paths.appIndex,
   module: {
@@ -28,7 +30,7 @@ module.exports = {
     ] ),
     new HtmlWebpackPlugin( {
       favicon: paths.appFavicon,
-      partials: [partials.all],
+      partials: joinedPartials,
       template: paths.appHTML
     } )
   ],
