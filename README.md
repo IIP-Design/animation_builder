@@ -2,6 +2,16 @@
 
 This repo provides a tool with which you can develop, test, and export animated JavaScript modules. It includes an example module which we will use to illustrate how to configure your module.
 
+## Setup
+
+To get started using the animation builder,
+
+1) Clone this repository: `git clone git@github.com:IIP-Design/animation_builder.git`
+2) Enter the cloned repo: `cd animation_builder`
+3) And install the dependencies: `npm install`
+
+You can now start creating and testing new modules.
+
 ## Add a New Module
 
 To add a module, create a directory for it in the `src` directory. A typical module will include an HTML snippet, a JavaScript file, and a stylesheet. For example our example module contains three files: `example.html`, `example.js`, and `example.scss`.
