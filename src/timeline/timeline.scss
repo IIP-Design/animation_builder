@@ -1,0 +1,91 @@
+.iran-timeline-bg {
+  background-color: #f1f1f1;
+  opacity: 0.8;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  min-height: 730px;
+}
+
+.iran-timeline-title {
+  font-family: Open Sans;
+  font-size: 2.5em;
+  color: #000000;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 5vh;
+}
+
+.iran-timeline-slide-title {
+  font-family: Open Sans;
+  font-size: 100px;
+  color: #ffffff;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding-left: 5vw;
+  padding-top: 3vh;
+}
+
+.iran-timeline-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20vh;
+  padding-bottom: 10vh;
+}
+
+.iran-timeline-card {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+
+.iran-timeline-dot {
+  height: 37px;
+  width: 37px;
+  background-color: #0a314d;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.iran-timeline-heading {
+  max-width: 128px;
+  max-height: 33px;
+  font-family: Open Sans;
+  font-size: 24px;
+  color: #063125;
+  font-weight: 800;
+  text-decoration: none solid rgb(6, 49, 37);
+}
+
+.iran-timeline-text {
+  max-width: 250px;
+  max-height: 75px;
+  font-family: Open Sans;
+  font-size: 18px;
+  color: #0a314d;
+  font-weight: 600;
+  text-decoration: none solid rgb(10, 49, 77);
+}
+
+@media screen and (max-width: 768px) {
+  .iran-timeline-slide-title {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .iran-timeline-div {
+    flex-direction: column;
+  }
+
+  .iran-timeline-title {
+    padding: 20px 20px 0 20px;
+  }
+
+}
