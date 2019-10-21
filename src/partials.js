@@ -1,9 +1,10 @@
 module.exports = {
-  slides: '/src/hero/hero.html',
-  slides: '/src/stats/stats.html',
-  slides: '/src/timeline/timeline.html',
+  // example: 'src/example/example.html',
+  hero: '/src/hero/hero.html',
+  highlight: '/src/highlight/highlight.html',
+  quiz: '/src/quiz/quiz.html',
+  resources: '/src/resources/resources.html',
   slides: '/src/slides/slides.html',
-  slides: '/src/highlight/highlight.html',
-  slides: '/src/quiz/quiz.html',
-  slides: '/src/resources/resources.html',
+  stats: '/src/stats/stats.html',
+  timeline: '/src/timeline/timeline.html'
 };
