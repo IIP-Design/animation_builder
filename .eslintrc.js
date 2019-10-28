@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['airbnb'],
+  extends: ['airbnb', 'prettier'],
   rules: {
     'array-bracket-newline': ['warn', { multiline: true, minItems: 3 }],
     'comma-dangle': ['warn', 'never'],
@@ -29,6 +29,7 @@ module.exports = {
     'no-param-reassign': 0,
     'no-underscore-dangle': 0,
     'no-unused-vars': ['warn', { vars: 'local', args: 'none' }],
+    'no-plusplus': ['warn'],
     'react/forbid-prop-types': 0,
     'react/jsx-curly-spacing': [2, { when: 'always', children: true }],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],

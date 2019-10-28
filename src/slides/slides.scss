@@ -1,102 +1,66 @@
-.graphic-scroll-bg {
-  background-color: #323a45;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  min-height: 730px;
-}
-
-.graphic-scroll-title {
-  font-family: Open Sans;
-  font-size: 2.5em;
-  color: #ffffff;
-  font-weight: 700;
+.panel {
+  height: 100%;
+  left: 0px;
+  position: absolute;
   text-align: center;
-  padding-top: 5vh;
-}
-
-.graphic-scroll-wrapper {
-  display: flex;
-  flex-direction: row;
-}
-
-.graphic-scroll-progress {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 3vw;
-  padding-right: 8vw;
-}
-
-.graphic-scroll-dot {
-  width: 25px;
-  height: 25px;
-  border: 2px solid #fff;
-  margin: 12px;
-  border-radius: 90px;
-}
-
-.graphic-scroll-dot:active {
-  width: 25px;
-  height: 25px;
-  background-color: #fff;
-  background-size: cover;
-}
-
-.slide {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+  top: 0px;
+  width: 100%;
 }
 
 .graphic-scroll-image {
+  padding-bottom: 1.5em;
+}
+
+#pinContainer {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+section,
+footer {
+  align-items: center;
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+#pinMaster {
+  position: relative;
+}
+
+footer {
+  height: 100px;
+  background-color: gray;
+}
+
+.spacer {
+  height: 100vh;
+  background-color: #42a6e0;
+}
+
+.one {
+  background-color: #262626;
+}
+.two {
+  background-color: #38ced7;
+}
+.three {
+  background-color: #953543;
+}
+
+.graphic-scroll-image {
+  margin-right: 5vw;
   max-height: 418px;
   max-width: 418px;
-  margin-right: 5vw;
 }
 
 .graphic-scroll-text {
-  max-width: 750px;
+  color: #ffffff;
   font-family: Open Sans;
   font-size: 24px;
-  color: #ffffff;
-}
-
-@media screen and (max-width: 768px) {
-  .graphic-scroll-wrapper {
-    flex-direction: column;
-    padding-top: 8vh;
-  }
-
-  .graphic-scroll-progress {
-    flex-direction: row;
-  }
-
-  .graphic-scroll-text {
-    padding: 50px 20px 0px 20px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .graphic-scroll-content {
-    padding-left: 10vw;
-    padding-right: 10vw;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-  }
-
-  .graphic-scroll-content {
-    padding: 20px;
-  }
-
-  .graphic-scroll-text {
-    padding-top: 20px;
-  }
-
+  max-width: 750px;
 }
