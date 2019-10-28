@@ -1,13 +1,14 @@
 import { TimelineLite, TweenLite } from 'gsap';
 
+import { getScrollOffsets } from '../utils/scrolling';
+
 import './slides.scss';
 
-const fixed = document.getElementById( 'pinContainer' );
-const distanceFromTop = fixed.offsetHeight;
-const distanceScrolled = window.pageYOffset;
-const distanceToFixed = distanceFromTop - distanceScrolled;
+// Get the top of the slide container section
+const fixed = document.getElementById( 'slide-container' );
+const distanceFromTop = fixed.getBoundingClientRect().top;
 
-TweenLite.set( 'body', { perspective: 700 } );
+TweenLite.set( '#slide-container' );
 const slides = document.querySelectorAll( '.panel' );
 const tl = new TimelineLite( { paused: true } );
 
@@ -21,12 +22,15 @@ for ( let i = 0; i < slides.length; i++ ) {
 }
 
 const GO = e => {
-  console.log( distanceToFixed );
-  const SD = Number.isNaN( Number( e ) ) ? e.wheelDelta || -e.detail : e;
-  if ( SD < 0 ) {
-    tl.play();
-  } else {
-    tl.reverse();
+  const off = getScrollOffsets();
+
+  if ( off.y >= distanceFromTop ) {
+    const SD = Number.isNaN( Number( e ) ) ? e.wheelDelta || -e.detail : e;
+    if ( SD < 0 ) {
+      tl.play();
+    } else {
+      tl.reverse();
+    }
   }
 };
 
