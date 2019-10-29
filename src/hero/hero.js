@@ -1,4 +1,11 @@
-// Import any CSS/SCSS files relevant to your module at the top of the js file
+import { TimelineMax, Power2 } from 'gsap';
+
 import './hero.scss';
-// import ScrollMagic from 'scrollmagic'; // ScrollMagic
-// import { TweenMax } from "gsap/TweenMax"; // GreenSock
+
+const tl = new TimelineMax( { repeat: -1 } );
+const line = document.getElementsByClassName( 'hero-line' );
+const lineArray = [...line];
+
+lineArray.forEach( element => {
+  tl.to( element, 2, { opacity: 1 } ).to( element, 2, { opacity: 0, ease: Power2.easeIn }, '+=1' );
+} );
