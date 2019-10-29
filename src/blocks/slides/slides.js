@@ -1,6 +1,6 @@
 import { TimelineLite, TweenLite } from 'gsap';
 
-import { getScrollOffsets } from '../utils/scrolling';
+import { getScrollOffsets } from '../../utils/scrolling';
 
 import './slides.scss';
 

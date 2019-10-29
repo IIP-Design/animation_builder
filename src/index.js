@@ -1,9 +1,9 @@
 // Import the module(s) you would like to test/build
-// import './example/example';
-import './hero/hero';
-import './highlighted/highlighted';
-import './quiz/quiz';
-import './resources/resources';
-import './slides/slides';
-import './stats/stats';
-import './timeline/timeline';
+// import './blocks/example/example';
+import './blocks/hero/hero';
+import './blocks/highlighted/highlighted';
+import './blocks/quiz/quiz';
+import './blocks/resources/resources';
+import './blocks/slides/slides';
+import './blocks/stats/stats';
+import './blocks/timeline/timeline';

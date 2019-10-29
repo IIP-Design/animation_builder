@@ -1,10 +1,10 @@
 module.exports = {
-  // example: 'src/example/example.html',
-  // hero: '/src/hero/hero.html',
-  // highlight: '/src/highlighted/highlighted.html',
-  // quiz: '/src/quiz/quiz.html',
-  // resources: '/src/resources/resources.html',
-  timeline: '/src/timeline/timeline.html',
-  slides: '/src/slides/slides.html'
-  // stats: '/src/stats/stats.html',
+  // example: 'src/blocks/example/example.html',
+  hero: '/src/blocks/hero/hero.html',
+  // highlight: '/src/blocks/highlighted/highlighted.html',
+  // quiz: '/src/blocks/quiz/quiz.html',
+  // resources: '/src/blocks/resources/resources.html',
+  timeline: '/src/blocks/timeline/timeline.html',
+  slides: '/src/blocks/slides/slides.html',
+  stats: '/src/blocks/stats/stats.html'
 };
