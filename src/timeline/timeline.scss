@@ -1,91 +1,160 @@
-.iran-timeline-bg {
-  background-color: #f1f1f1;
-  opacity: 0.8;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  min-height: 730px;
+.timeline {
+  &-bg {
+    background-color: #f1f1f1;
+    min-height: 730px;
+    opacity: 0.8;
+    width: 100%;
+  }
+
+  &-card {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  &-container {
+    display: grid;
+    grid-template-areas:
+      '. top1 . top2'
+      'line line line line'
+      'bottom1 . bottom2 .';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+    padding: 10rem 0;
+    width: 95%;
+  }
+
+  &-dot {
+    background-color: #0a314d;
+    border-radius: 50%;
+    height: 37px;
+    transform: translateY(-17.5px);
+    width: 37px;
+  }
+
+  &-heading {
+    color: #063125;
+    font-size: 24px;
+    font-weight: 800;
+    max-height: 33px;
+    max-width: 128px;
+  }
+
+  &-line {
+    background-color: #0a314d;
+    border: 3px solid #0a314d;
+    display: grid;
+    grid-area: line;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 1px;
+    justify-items: center;
+    margin: 2rem auto;
+    width: 100%;
+  }
+
+  &-slide-title {
+    color: #ffffff;
+    font-size: 100px;
+    font-weight: 800;
+    padding-left: 5vw;
+    padding-top: 3vh;
+    text-transform: uppercase;
+  }
+
+  &-text {
+    color: #0a314d;
+    max-height: 75px;
+    max-width: 250px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &-title {
+    color: #000000;
+    font-size: 2.5em;
+    font-weight: 700;
+    padding-top: 5rem;
+    text-align: center;
+  }
 }
 
-.iran-timeline-title {
-  font-family: Open Sans;
-  font-size: 2.5em;
-  color: #000000;
-  font-weight: 700;
-  text-align: center;
-  padding-top: 5vh;
+// Place grid items in correct grid spot
+.top1 {
+  align-self: end;
+  grid-area: top1;
 }
 
-.iran-timeline-slide-title {
-  font-family: Open Sans;
-  font-size: 100px;
-  color: #ffffff;
-  font-weight: 800;
-  text-transform: uppercase;
-  padding-left: 5vw;
-  padding-top: 3vh;
+.top2 {
+  align-self: end;
+  grid-area: top2;
 }
 
-.iran-timeline-div {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 20vh;
-  padding-bottom: 10vh;
+.bottom1 {
+  grid-area: bottom1;
 }
 
-.iran-timeline-card {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  align-items: center;
-}
-
-.iran-timeline-dot {
-  height: 37px;
-  width: 37px;
-  background-color: #0a314d;
-  border-radius: 50%;
-  display: inline-block;
-  margin-bottom: 15px;
-}
-
-.iran-timeline-heading {
-  max-width: 128px;
-  max-height: 33px;
-  font-family: Open Sans;
-  font-size: 24px;
-  color: #063125;
-  font-weight: 800;
-  text-decoration: none solid rgb(6, 49, 37);
-}
-
-.iran-timeline-text {
-  max-width: 250px;
-  max-height: 75px;
-  font-family: Open Sans;
-  font-size: 18px;
-  color: #0a314d;
-  font-weight: 600;
-  text-decoration: none solid rgb(10, 49, 77);
+.bottom2 {
+  grid-area: bottom2;
 }
 
 @media screen and (max-width: 768px) {
-  .iran-timeline-slide-title {
-    font-size: 3em;
+  .timeline {
+    &-container {
+      grid-template-areas:
+        'bottom1 line .'
+        '. line top1'
+        'bottom2 line .'
+        '. line top2';
+      grid-template-columns: 1fr 0.25fr 1fr;
+      margin: 0 auto;
+      padding: 5rem 0;
+    }
+
+    &-dot {
+      transform: translateY(0);
+      transform: translateX(-17.5px);
+    }
+
+    &-line {
+      align-items: center;
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr;
+      height: 100%;
+      margin: 0 1.75rem;
+      width: 1px;
+    }
+
+    &-slide-title {
+      font-size: 3em;
+    }
+  }
+
+  .bottom1,
+  .bottom2 {
+    align-items: flex-end;
+    margin: 2rem 0;
+
+    > .timeline-text {
+      text-align: right;
+    }
+  }
+
+  .top1,
+  .top2 {
+    align-items: flex-start;
+    margin: 2rem 0;
+
+    > .timeline-text {
+      text-align: left;
+    }
   }
 }
 
 @media screen and (max-width: 500px) {
-  .iran-timeline-div {
-    flex-direction: column;
-  }
-
-  .iran-timeline-title {
+  .timeline-title {
     padding: 20px 20px 0 20px;
   }
-
 }
