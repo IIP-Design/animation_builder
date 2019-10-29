@@ -1,7 +1,7 @@
 .hero-header {
-  background-color: #0a314d;
+  background-color: #09304c;
   background-repeat: no-repeat;
-  height: 227px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -32,7 +32,7 @@
   background-image: url(https://viperstaticdev.s3.amazonaws.com/stories/uploads/2019/09/iran_header_bg.png);
   background-position: center top;
   background-size: cover;
-  height: 848px;
+  height: 100vh;
   width: 100vw;
   position: relative;
   left: 50%;
@@ -40,34 +40,47 @@
   margin-left: -50vw;
   margin-right: -50vw;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
 }
 
-.hero-info-paragraph {
+.hero-line {
   max-width: 719px;
   min-height: 135px;
+  position: absolute;
   font-family: Open Sans;
   font-size: 30px;
   color: #ffffff;
   font-weight: 600;
   margin-left: 10vw;
   margin-bottom: 1em;
+  opacity: 0;
 }
 
 @media screen and (max-width: 768px) {
   .hero-content-background {
-    max-height: 450px;
+    background-position: 75% top;
+    height: 75vh;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .hero-content-background {
-    max-height: 300px;
-  }
-
   .hero-title {
     text-align: center;
-    padding: 20px;
   }
+
+  .hero-line {
+    font-size: 1.5rem;
+  }
+
+  .hero-content {
+    padding-top: 15vh;
+  }
+
+  .hero-content-background {
+    align-items: flex-start;
+    height: 80vh;
+    background-position: 80% top;
+  }
+
+
 }
