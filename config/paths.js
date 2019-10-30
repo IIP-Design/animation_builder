@@ -5,14 +5,14 @@ const fs = require( 'fs' );
 const appDirectory = fs.realpathSync( process.cwd() );
 
 // Resolves relative paths from the application root
-const resolveApp = ( relativePath ) => path.resolve( appDirectory, relativePath );
+const resolveApp = relativePath => path.resolve( appDirectory, relativePath );
 
 module.exports = {
   appAssets: resolveApp( 'static/assets' ),
   appDist: resolveApp( 'dist' ),
   appFavicon: resolveApp( 'static/favicon.png' ),
   appHTML: resolveApp( 'static/index.html' ),
-  appIndex: resolveApp( 'src/index.js' ),
+  appIndex: resolveApp( 'src/_iran/index.js' ),
   appPackage: resolveApp( 'package.json' ),
   appSrc: resolveApp( 'src' )
 };

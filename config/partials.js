@@ -1,7 +1,7 @@
 const path = require( 'path' );
 const fs = require( 'fs' );
 
-const partials = require( '../src/partials' );
+const partials = require( '../src/_iran/partials' );
 
 // Gets the root directory for the application
 const appDirectory = fs.realpathSync( process.cwd() );
@@ -12,7 +12,7 @@ function getPartial( pathFromRoot ) {
 }
 
 // Create an array of html partials to inject into the index.html
-const partialsArr = Object.keys( partials ).map( ( val ) => {
+const partialsArr = Object.keys( partials ).map( val => {
   const p = getPartial( partials[val] );
   return p;
 } );
