@@ -42,16 +42,13 @@ const runTimeline = ( arr1, arr2 ) => {
   } );
 };
 
-const GO = e => {
+const playWhenAtTop = e => {
   const off = getScrollOffsets();
 
   if ( off.y >= distanceFromTop ) {
-    const SD = Number.isNaN( Number( e ) ) ? e.wheelDelta || -e.detail : e;
-    if ( SD < 0 ) {
-      runTimeline( dotArray, cardArray );
-    }
+    runTimeline( dotArray, cardArray );
   }
 };
 
-document.addEventListener( 'mousewheel', GO );
-document.addEventListener( 'DOMMouseScroll', GO );
+document.addEventListener( 'mousewheel', playWhenAtTop );
+document.addEventListener( 'DOMMouseScroll', playWhenAtTop );
