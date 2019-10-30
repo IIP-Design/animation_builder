@@ -7,10 +7,8 @@
     "name": "Marek Rewers, Bureau of Global Public Affairs, U.S. Department of State"
   },
   "scripts": {
-    "build": "webpack --config config/webpack.prod.js",
-    "build:iran": "webpack --env prod --config config/pages/iran.js",
-    "dev": "webpack-dev-server --config config/webpack.dev.js --open",
-    "dev:iran": "webpack-dev-server --env dev --config config/pages/iran.js --open"
+    "build": "node ./config/cli/prod.js",
+    "dev": "node ./config/cli/dev.js"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
@@ -30,10 +28,12 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
+    "inquirer": "^7.0.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "sass-loader": "^8.0.0",
+    "shelljs": "^0.8.3",
     "style-loader": "^1.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.40.2",
