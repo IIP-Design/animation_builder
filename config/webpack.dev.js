@@ -1,7 +1,4 @@
-const merge = require( 'webpack-merge' );
-const baseConfig = require( './webpack.common' );
-
-module.exports = merge( baseConfig, {
+module.exports = {
   devServer: {
     contentBase: './dist',
     port: 4321
@@ -12,10 +9,8 @@ module.exports = merge( baseConfig, {
     rules: [
       {
         test: /\.(sa|sc|c)ss$/,
-        use: [
-          'style-loader', 'css-loader', 'sass-loader'
-        ]
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
   }
-} );
+};

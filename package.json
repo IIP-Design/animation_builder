@@ -8,7 +8,9 @@
   },
   "scripts": {
     "build": "webpack --config config/webpack.prod.js",
-    "dev": "webpack-dev-server --config config/webpack.dev.js --open"
+    "build:iran": "webpack --env prod --config config/pages/iran.js",
+    "dev": "webpack-dev-server --config config/webpack.dev.js --open",
+    "dev:iran": "webpack-dev-server --env dev --config config/pages/iran.js --open"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",

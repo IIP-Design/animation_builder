@@ -12,7 +12,9 @@ module.exports = {
   appDist: resolveApp( 'dist' ),
   appFavicon: resolveApp( 'static/favicon.png' ),
   appHTML: resolveApp( 'static/index.html' ),
-  appIndex: resolveApp( 'src/_iran/index.js' ),
   appPackage: resolveApp( 'package.json' ),
-  appSrc: resolveApp( 'src' )
+  appSrc: resolveApp( 'src' ),
+  exampleIndex: resolveApp( 'src/_example/index.js' ),
+  fiveGIndex: resolveApp( 'src/_5g/index.js' ),
+  iranIndex: resolveApp( 'src/_iran/index.js' )
 };

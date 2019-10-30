@@ -1,19 +1,12 @@
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
-const merge = require( 'webpack-merge' );
 
-const baseConfig = require( './webpack.common' );
-
-module.exports = merge( baseConfig, {
+module.exports = {
   mode: 'production',
   module: {
     rules: [
       {
         test: /\.(sa|sc|c)ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader'
-        ]
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       }
     ]
   },
@@ -22,4 +15,4 @@ module.exports = merge( baseConfig, {
       filename: '[name].css'
     } )
   ]
-} );
+};

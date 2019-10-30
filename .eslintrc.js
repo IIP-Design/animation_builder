@@ -1,7 +1,6 @@
 module.exports = {
   extends: ['airbnb', 'prettier'],
   rules: {
-    'array-bracket-newline': ['warn', { multiline: true, minItems: 3 }],
     'comma-dangle': ['warn', 'never'],
     'consistent-return': 0,
     'import/first': 0,
