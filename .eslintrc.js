@@ -28,6 +28,7 @@ module.exports = {
     'no-param-reassign': 0,
     'no-underscore-dangle': 0,
     'no-unused-vars': ['warn', { vars: 'local', args: 'none' }],
+    'no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
     'no-plusplus': ['warn', { allowForLoopAfterthoughts: true }],
     'react/forbid-prop-types': 0,
     'react/jsx-curly-spacing': [2, { when: 'always', children: true }],
