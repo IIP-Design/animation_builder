@@ -33,9 +33,43 @@ cardArray.forEach( card => {
 
 // Navigate between slides...
 
-const boxArray = [...boxes];
+// Using arrows
+let currentItem = 1;
+
+const nextArrow = document.querySelector( '.tf-carousel-arrow.next' );
+const prevArrow = document.querySelector( '.tf-carousel-arrow.prev' );
+
+const goTo = where => {
+  const isFirst = currentItem === 1;
+  const isLast = currentItem === cardArray.length;
+
+  if ( where === 'next' && !isLast ) {
+    currentItem++; // eslint-disable-line no-plusplus
+    toggleItems( cardArray, currentItem );
+  } else if ( where === 'next' && isLast ) {
+    currentItem = 1;
+    toggleItems( cardArray, currentItem );
+  } else if ( where === 'prev' && !isFirst ) {
+    currentItem--; // eslint-disable-line no-plusplus
+    toggleItems( cardArray, currentItem );
+  } else if ( where === 'prev' && isFirst ) {
+    currentItem = cardArray.length;
+    toggleItems( cardArray, currentItem );
+  }
+};
+
+nextArrow.addEventListener( 'click', () => goTo( 'next' ) );
+prevArrow.addEventListener( 'click', () => goTo( 'prev' ) );
+
+// Using buttons
+const buttons = document.querySelectorAll( '.tf-button' );
 const btnArray = [...buttons];
 
 btnArray.forEach( btn => {
-  btn.addEventListener( 'click', () => toggleItems( boxArray, btn.dataset.id ) );
+  const navigateToBox = () => {
+    toggleItems( cardArray, btn.dataset.id );
+    currentItem = Number( btn.dataset.id );
+  };
+
+  btn.addEventListener( 'click', navigateToBox );
 } );
