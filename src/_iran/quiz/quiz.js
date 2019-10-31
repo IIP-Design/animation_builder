@@ -19,16 +19,18 @@ const rotate = card => {
     rotationX: -180,
     transformStyle: 'preserve-3d'
   } );
-};
 
-const rotateBack = card => {
-  TweenLite.to( card, 2, { rotationX: 0 } );
+  TweenLite.to( card, 2, {
+    delay: 3,
+    ease: Back.easeIn,
+    rotationX: -360,
+    transformStyle: 'preserve-3d'
+  } );
 };
 
 // Rotate cards on hover
 cardArray.forEach( card => {
-  card.addEventListener( 'mouseover', () => rotate( card ) );
-  card.addEventListener( 'mouseleave', () => rotateBack( card ) );
+  card.addEventListener( 'click', () => rotate( card ) );
 } );
 
 // Navigate between slides...
