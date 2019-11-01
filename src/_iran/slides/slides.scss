@@ -1,39 +1,3 @@
-.panel {
-  height: 100%;
-  left: 0px;
-  position: absolute;
-  text-align: center;
-  top: 0px;
-  width: 100%;
-}
-
-.graphic-scroll-image {
-  padding-bottom: 1.5em;
-}
-
-#slide-container {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  position: sticky;
-  top: 0;
-}
-
-section,
-footer {
-  align-items: center;
-  display: flex;
-  font-size: 18px;
-  font-weight: 700;
-  justify-content: center;
-  text-transform: uppercase;
-}
-
-footer {
-  height: 100px;
-  background-color: gray;
-}
-
 .one {
   background-color: #262626;
 }
@@ -44,15 +8,19 @@ footer {
   background-color: #953543;
 }
 
-.graphic-scroll-image {
-  margin-right: 5vw;
-  max-height: 418px;
-  max-width: 418px;
+.slide {
+  align-items: center;
+  height: 100%;
+  display: flex;
+  padding: 2rem;
+  justify-content: space-evenly;
+  position: absolute;
+  width: 100vw;
 }
 
-.graphic-scroll-text {
-  color: #ffffff;
-  font-family: Open Sans;
-  font-size: 24px;
-  max-width: 750px;
+#slide-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }

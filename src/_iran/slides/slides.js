@@ -1,38 +1,28 @@
-import { TimelineLite, TweenLite } from 'gsap';
+import ScrollMagic from 'scrollmagic';
+import { Linear, TimelineMax } from 'gsap/TweenMax';
 
-import { getScrollOffsets } from '../../utils/scrolling';
+// eslint-disable-next-line import/no-unresolved
+import 'imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
 
 import './slides.scss';
 
-// Get the top of the slide container section
-const fixed = document.getElementById( 'slide-container' );
-const distanceFromTop = fixed.getBoundingClientRect().top;
+const wipe = new TimelineMax()
+  .fromTo( 'section.slide.two', 2, { xPercent: 100 }, { xPercent: 0, ease: Linear.easeNone }, '+=1' )
+  .fromTo(
+    'section.slide.three',
+    2,
+    { xPercent: 100 },
+    { xPercent: 0, ease: Linear.easeNone },
+    '+=1'
+  );
 
-TweenLite.set( '#slide-container' );
-const slides = document.querySelectorAll( '.panel' );
-const tl = new TimelineLite( { paused: true } );
+const controller = new ScrollMagic.Controller();
 
-for ( let i = 0; i < slides.length; i++ ) {
-  if ( i !== slides.length - 1 ) {
-    tl.to( slides[i], 0.5, {} )
-      .to( slides[i], 0.7, { xPercent: -100 }, `L${i}` )
-      .from( slides[i + 1], 0.7, { xPercent: 100 }, `L${i}` )
-      .from( slides[i + 1], 0.5, {} );
-  }
-}
-
-const GO = e => {
-  const off = getScrollOffsets();
-
-  if ( off.y >= distanceFromTop ) {
-    const SD = Number.isNaN( Number( e ) ) ? e.wheelDelta || -e.detail : e;
-    if ( SD < 0 ) {
-      tl.play();
-    } else {
-      tl.reverse();
-    }
-  }
-};
-
-document.addEventListener( 'mousewheel', GO );
-document.addEventListener( 'DOMMouseScroll', GO );
+new ScrollMagic.Scene( {
+  triggerElement: '#slide-container',
+  triggerHook: 'onLeave',
+  duration: '100%'
+} )
+  .setPin( '#slide-container' )
+  .setTween( wipe )
+  .addTo( controller );
