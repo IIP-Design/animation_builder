@@ -1,67 +1,101 @@
-.iran-stats-box-bg {
-  // background-color: #323a45;
-  background-image: url(https://viperstaticdev.s3.amazonaws.com/stories/uploads/2019/10/AP_17364587200944.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  opacity: 0.8;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
+.iran-stats {
+  &-box-bg {
+    // background-color: #323a45;
+    background-image: url(https://viperstaticdev.s3.amazonaws.com/stories/uploads/2019/10/AP_17364587200944.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.8;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
 
-.iran-stats-title {
-  font-size: 2.5em;
-  color: #ffffff;
-  font-weight: 700;
-  text-align: center;
-  padding-top: 10vh;
-}
+  &-title {
+    font-size: 2.5em;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 10vh;
+  }
 
-.iran-stats-array {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-content: center;
-  padding-bottom: 150px;
-  padding-top: 100px;
-}
+  &-array {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-bottom: 150px;
+    padding-top: 100px;
+  }
 
-.iran-stats-item {
-  border: 5px solid #ffffff;
-  padding: 40px;
-  margin: 10px;
-}
+  &-item {
+    border: 5px solid #ffffff;
+    padding: 40px;
+    margin: 10px;
 
-.iran-stats-item-percent {
-  font-size: 80px;
-  font-weight: 800;
-  color: #ffffff;
-  text-decoration: none solid rgb(0, 0, 0);
-  text-align: center;
-  margin: 0;
-}
+    &-percent {
+      font-size: 80px;
+      font-weight: 800;
+      color: #ffffff;
+      text-decoration: none solid rgb(0, 0, 0);
+      text-align: center;
+      margin: 0;
+    }
 
-.iran-stats-item-info {
-  font-size: 16px;
-  color: #ffffff;
-  text-decoration: none solid rgb(0, 0, 0);
-  text-align: center;
-  max-width: 200px;
-  margin: 0;
+    &-info {
+      font-size: 16px;
+      color: #ffffff;
+      text-decoration: none solid rgb(0, 0, 0);
+      text-align: center;
+      max-width: 200px;
+      margin: 0;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .iran-stats-array {
-    flex-direction: column;
+  .iran-stats {
+    &-array {
+      flex-direction: column;
+    }
+
+    &-box-bg {
+      background-size: cover;
+      background-position: center;
+      background-attachment: unset;
+    }
+  }
+
+  .resources-link {
+    margin: 10px;
+    height: 100px;
+    width: 200px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .iran-stats-array {
-    padding-bottom: 50px;
-    padding-top: 50px;
+  .iran-stats {
+    &-array {
+      padding-bottom: 50px;
+      padding-top: 50px;
+    }
+
+    &-title {
+      font-size: 2rem;
+    }
+
+    &-item {
+      padding: 10px;
+
+      &-percent {
+        font-size: 2rem;
+      }
+    }
+
+    &-array {
+      padding: 20px 0px 20px 0px;
+    }
   }
 }

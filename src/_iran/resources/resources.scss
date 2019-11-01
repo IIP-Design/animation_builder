@@ -43,12 +43,12 @@
     color: #063125;
     font-size: 30px;
     font-weight: 600;
-    height: 229px;
+    height: 200px;
     margin: 15px;
     padding: 50px;
     text-decoration: none solid rgb(6, 49, 37);
     text-align: center;
-    width: 376px;
+    width: 300px;
   }
 
   &-additional-resources {
@@ -119,6 +119,18 @@ hr.card-horizontal {
     font-size: 20px;
     height: 200px;
     width: 200px;
+
+    &-array {
+      padding-bottom: 10px;
+    }
+
+    &-button {
+      font-size: 1rem;
+      margin: 10px;
+      padding: 10px;
+      width: 200px;
+      height: auto;
+    }
   }
 
   .resources-link {
@@ -144,8 +156,7 @@ hr.card-horizontal {
     }
 
     &-button {
-      font-size: 15px;
-      height: 100px;
+      height: 75px;
       padding: 0;
       width: 200px;
     }
