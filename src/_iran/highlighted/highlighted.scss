@@ -6,10 +6,6 @@
   background-size: cover;
   width: 100vw;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -41,7 +37,8 @@
   font-weight: 700;
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+}
 
 @media screen and (max-width: 500px) {
   .position-on-iran-title {
