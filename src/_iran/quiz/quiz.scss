@@ -37,7 +37,7 @@
     color: #ffffff;
     display: flex;
     height: 293px;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 600;
     justify-content: center;
     margin: 0 3rem;
@@ -116,17 +116,18 @@
     }
 
     &-card {
-      height: 5rem;
+      height: auto;
       margin: 1rem auto;
 
       &-container {
         grid-area: card;
-        margin: 3rem auto;
+        margin: 5rem auto;
       }
 
       &-face {
-        height: 5rem;
-        padding: 3rem;
+        height: auto;
+        min-height: 125px;
+        padding: 1rem;
         width: 100%;
       }
     }
