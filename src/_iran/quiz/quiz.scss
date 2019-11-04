@@ -35,7 +35,6 @@
 
   &-card {
     align-items: center;
-    border: 5px solid #d01319;
     color: #ffffff;
     display: flex;
     height: 293px;
@@ -49,6 +48,7 @@
 
     &-face {
       align-items: center;
+      border: 5px solid #d01319;
       display: flex;
       height: 293px;
       justify-content: center;
