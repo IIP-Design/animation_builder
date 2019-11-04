@@ -8,7 +8,7 @@ import './timeline.scss';
 const timelineSection = document.getElementById( 'timeline-section' );
 const distanceFromTop = timelineSection.getBoundingClientRect().top;
 
-// Initialize timeline
+// Initialize timelines
 const tl = new TimelineMax( { paused: true, repeat: 0 } );
 const tl2 = new TimelineMax( { paused: true, repeat: 0 } );
 
@@ -24,28 +24,30 @@ const dotArray = [...dots];
 const activeColor = '#d01319';
 const inactiveColor = '#0a314d';
 
+// Define how each timeline behaves
 const runTimeline = ( arr1, arr2 ) => {
   const activeBg = { backgroundColor: activeColor };
   const inactiveBg = { backgroundColor: inactiveColor };
 
   arr1.forEach( el => {
-    tl.fromTo( el, 3, inactiveBg, activeBg )
-      .to( el, 3, inactiveBg )
+    tl.fromTo( el, 2, inactiveBg, activeBg )
+      .to( el, 2, inactiveBg )
       .play();
   } );
 
   arr2.forEach( el => {
     tl2
-      .fromTo( el.children, 3, { color: inactiveColor }, { color: activeColor } )
-      .to( el.children, 3, { color: inactiveColor } )
+      .fromTo( el.children, 2, { color: inactiveColor }, { color: activeColor } )
+      .to( el.children, 2, { color: inactiveColor } )
       .play();
   } );
 };
 
+// Kick off timeline animation when section reaches top of the screen
 const playWhenAtTop = e => {
   const off = getScrollOffsets();
 
-  if ( off.y >= distanceFromTop ) {
+  if ( off.y >= distanceFromTop && cards && dots && cardArray.length > 0 && dotArray.length > 0 ) {
     runTimeline( dotArray, cardArray );
   }
 };
