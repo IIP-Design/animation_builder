@@ -38,6 +38,19 @@ if ( cards && cardArray.length > 0 ) {
 
 // Navigate between slides...
 
+// Handle counter for mobile
+const counterContainer = document.getElementById( 'tf-counter' );
+const counter = document.createElement( 'p' );
+
+const updateCounter = ( el, number, total ) => {
+  el.innerHTML = `${number} / ${total}`;
+};
+
+if ( counterContainer && counter ) {
+  counterContainer.appendChild( counter );
+  updateCounter( counter, 1, cardArray.length );
+}
+
 // ...Using arrows
 let currentItem = 1;
 
@@ -52,15 +65,19 @@ const goTo = where => {
   if ( where === 'next' && !isLast ) {
     currentItem++; // eslint-disable-line no-plusplus
     toggleItems( cardArray, currentItem );
+    updateCounter( counter, currentItem, cardArray.length );
   } else if ( where === 'next' && isLast ) {
     currentItem = 1;
     toggleItems( cardArray, currentItem );
+    updateCounter( counter, currentItem, cardArray.length );
   } else if ( where === 'prev' && !isFirst ) {
     currentItem--; // eslint-disable-line no-plusplus
     toggleItems( cardArray, currentItem );
+    updateCounter( counter, currentItem, cardArray.length );
   } else if ( where === 'prev' && isFirst ) {
     currentItem = cardArray.length;
     toggleItems( cardArray, currentItem );
+    updateCounter( counter, currentItem, cardArray.length );
   }
 };
 
