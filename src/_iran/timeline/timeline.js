@@ -63,7 +63,9 @@ const playWhenAtTop = e => {
   ) {
     runTimeline( dotArray, cardArray, titleArray );
     document.removeEventListener( 'scroll', playWhenAtTop );
+    document.removeEventListener( 'touchmove', playWhenAtTop );
   }
 };
 
 document.addEventListener( 'scroll', playWhenAtTop );
+document.addEventListener( 'touchmove', playWhenAtTop );
