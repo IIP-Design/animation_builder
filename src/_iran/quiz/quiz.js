@@ -22,7 +22,7 @@ const rotate = card => {
   } );
 
   TweenLite.to( card, 2, {
-    delay: 3,
+    delay: 2,
     ease: Back.easeIn,
     rotationX: -360,
     transformStyle: 'preserve-3d'

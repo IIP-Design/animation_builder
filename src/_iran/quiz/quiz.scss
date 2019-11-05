@@ -176,6 +176,7 @@
 
     > p {
       color: #ffffff;
+      font-size: 1rem;
       margin: 0;
       padding: 0 0 1rem;
     }
@@ -193,8 +194,16 @@
       }
     }
 
+    &-carousel-arrow {
+      font-size: 3rem;
+    }
+
     &-title {
       font-size: 2rem;
     }
+  }
+
+  #tf-counter > p {
+    font-size: 0.9rem;
   }
 }
