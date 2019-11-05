@@ -1,0 +1,151 @@
+.hero {
+  &-content-background {
+    align-items: center;
+    background-color: #001027;
+    background-image: url(https://viperstaticdev.s3.amazonaws.com/stories/uploads/2019/11/5g_bg_temp_wide.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    width: 100vw;
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 800px;
+
+    &-title {
+      color: #ffffff;
+      text-align: center;
+      font-size: 4rem;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: -0.75px;
+      margin: 2rem 0 0;
+      max-width: 1164px;
+    }
+
+    &-text {
+      max-width: 719px;
+      font-size: 1.3rem;
+      color: #ffffff;
+      max-width: 719px;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      margin-right: 40vw;
+      margin-top: 10vh;
+    }
+  }
+}
+
+.nav {
+  margin: 20px 0px 20px 0;
+
+  &-header {
+    max-width: 985px;
+    margin-top: 65px;
+    margin-left: 75px;
+    font-size: 2.5rem;
+    color: #000000;
+  }
+
+  &-array {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  &-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #c7c4c3;
+    min-width: 237px;
+    min-height: 204px;
+  }
+
+  &-button:hover {
+    border: 3px solid #000000;
+  }
+
+  &-text {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    &-header {
+      &-title {
+        text-align: center;
+        font-size: 3rem;
+        margin: 1.5rem;
+      }
+
+      &-text {
+        margin: 1.5rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .nav {
+    &-button {
+      margin: 0.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero {
+    &-header {
+      &-title {
+        text-align: center;
+        font-size: 2rem;
+      }
+
+      &-text {
+        margin: 1rem;
+        font-size: 1.2rem;
+      }
+    }
+
+    &-content {
+      &-background {
+        background-position: center bottom;
+        height: 100%;
+        background-size: cover;
+      }
+    }
+  }
+
+  .nav {
+    &-array {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &-header {
+      margin: 1rem;
+      font-size: 2rem;
+      text-align: left;
+    }
+
+    &-button {
+      flex-direction: column;
+      justify-content: center;
+      height: 200px;
+      width: 150px;
+      margin: 5px;
+      min-width: 0;
+      min-height: 0;
+    }
+  }
+}
