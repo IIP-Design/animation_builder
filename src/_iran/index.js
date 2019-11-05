@@ -1,3 +1,5 @@
+import './globals.scss';
+
 import './hero/hero';
 import './highlighted/highlighted';
 import './quiz/quiz';
