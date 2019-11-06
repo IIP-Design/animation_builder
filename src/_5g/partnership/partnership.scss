@@ -1,0 +1,125 @@
+.partnership {
+  &-bg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #062135;
+    min-height: 750px;
+    position: relative;
+    width: 100vw;
+    background-image: url("https://viperstaticdev.s3.amazonaws.com/stories/uploads/2019/11/tower_temp.png");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  &-title {
+    font-size: 3.5rem;
+    color: #000000;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  &-subtitle {
+    font-size: 2.5rem;
+    color: #000000;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  &-text {
+    font-size: 1.75rem;
+    color: #000000;
+    text-align: center;
+    margin-top: 2rem;
+    width: 75vw;
+  }
+
+  &-quote {
+    width: 1290px;
+    height: 293px;
+    background-color: #dadada;
+    background-image: url("https://viperstaticdev.s3.amazonaws.com/stories/uploads/2019/11/wave_line_bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 1px 1px 5px rgba(241, 241, 241, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+
+    &-text {
+      font-size: 1.5rem;
+      color: #002d74;
+      text-align: center;
+      padding: 3rem;
+    }
+  }
+
+  &-array {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .partnership {
+    &-array {
+      margin-top: 2rem;
+    }
+
+    &-text {
+      width: 90vw;
+    }
+
+    &-subtitle {
+      width: 90vw;
+    }
+
+    &-quote {
+      width: 90vw;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .partnership {
+    &-title {
+      font-size: 2rem;
+    }
+
+    &-subtitle {
+      font-size: 1.5rem;
+    }
+
+    &-text {
+      font-size: 1.1rem;
+    }
+
+    &-quote {
+      &-text {
+        margin: 1rem;
+        font-size: 1.1rem;
+        padding: 1rem;
+      }
+    }
+
+    &-array {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      flex-direction: column;
+    }
+  }
+}
