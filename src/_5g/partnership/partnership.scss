@@ -1,63 +1,62 @@
 .partnership {
   &-bg {
+    align-items: center;
+    background-color: #062135;
+    background-position: center center;
+    background-size: cover;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    background-color: #062135;
     min-height: 750px;
     position: relative;
     width: 100vw;
-    background-size: cover;
-    background-position: center center;
   }
 
   &-content {
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
     margin-bottom: 3rem;
   }
 
   &-title {
-    font-size: 3.5rem;
     color: #000000;
-    text-align: center;
+    font-size: 3.5rem;
     margin-top: 2rem;
+    text-align: center;
   }
 
   &-subtitle {
-    font-size: 2.5rem;
     color: #000000;
-    text-align: center;
+    font-size: 2.5rem;
     margin-top: 0.5rem;
+    text-align: center;
   }
 
   &-text {
-    font-size: 1.75rem;
     color: #000000;
-    text-align: center;
+    font-size: 1.75rem;
     margin-top: 2rem;
+    text-align: center;
     width: 75vw;
   }
 
   &-quote {
-    width: 1290px;
-    height: 293px;
+    align-items: center;
     background-color: #dadada;
     background-repeat: repeat;
     box-shadow: 1px 1px 5px rgba(241, 241, 241, 1);
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-top: 3rem;
+    width: 80%;
 
     &-text {
-      font-size: 1.5rem;
       color: #002d74;
-      text-align: center;
+      font-size: 1.5rem;
       padding: 3rem;
+      text-align: center;
     }
   }
 
