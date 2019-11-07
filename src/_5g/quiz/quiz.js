@@ -1,6 +1,7 @@
 import { TweenLite, Back } from 'gsap';
 
 import { toggleItems } from '../../utils/toggle';
+import { buildFeed } from '../../utils/cdpFeed/cdpFeed';
 
 import './quiz.scss';
 
@@ -102,4 +103,10 @@ if ( buttons && btnArray.length > 0 ) {
 
     btn.addEventListener( 'click', navigateToBox );
   } );
+}
+
+const feed = document.getElementById( 'tf-cdp-feed' );
+
+if ( feed ) {
+  buildFeed( feed );
 }
