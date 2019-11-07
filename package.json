@@ -10,10 +10,13 @@
     "build": "node ./config/cli/prod.js",
     "dev": "node ./config/cli/dev.js"
   },
+  "browserslist": [
+    "last 2 versions",
+    "not dead"
+  ],
   "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
-    "@babel/preset-react": "^7.0.0",
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-class-properties": "^6.24.1",

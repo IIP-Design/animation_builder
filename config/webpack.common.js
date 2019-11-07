@@ -6,7 +6,18 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader']
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              plugins: [
+                '@babel/plugin-proposal-optional-chaining',
+                'babel-plugin-transform-class-properties'
+              ]
+            }
+          },
+          'eslint-loader'
+        ]
       }
     ]
   },
