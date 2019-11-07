@@ -105,6 +105,7 @@ if ( buttons && btnArray.length > 0 ) {
   } );
 }
 
+// Adds feed of CDP content to the block
 const feed = document.getElementById( 'tf-cdp-feed' );
 
 if ( feed ) {

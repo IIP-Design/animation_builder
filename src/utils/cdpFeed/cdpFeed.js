@@ -13,7 +13,6 @@ export const getFromCDP = async ( source, id ) => {
 
     const data = result?.hits?.hits?.[0]?._source ? result.hits.hits[0]._source : {};
 
-    console.log( data );
     return data;
   } catch ( error ) {
     console.log( 'Error:', error );
@@ -25,6 +24,7 @@ export const parseFeedData = async el => {
   const { id, source } = el.dataset;
 
   const data = await getFromCDP( source, id );
+  console.log( data );
 
   const image = data?.thumbnail?.sizes?.small?.url ? data.thumbnail.sizes.small.url : '';
   const imageAlt = data?.thumbnail?.alt ? data.thumbnail.alt : '';
@@ -43,20 +43,20 @@ export const buildFeed = feed => {
     const data = await parseFeedData( child );
 
     const a = document.createElement( 'a' );
-    const img = document.createElement( 'img' );
+    const d = document.createElement( 'div' );
     const p = document.createElement( 'p' );
 
     const title = document.createTextNode( data.title );
 
+    child.setAttribute( 'style', `background-image: url('${data.image}')` );
+
     a.setAttribute( 'href', data.link );
     a.setAttribute( 'class', 'cdp-feed-item-link' );
-    img.setAttribute( 'src', data.image );
-    img.setAttribute( 'alt', data.imageAlt );
-    p.appendChild( title );
     p.setAttribute( 'class', 'cdp-feed-item-title' );
 
-    a.appendChild( img );
-    a.appendChild( p );
+    p.appendChild( title );
+    d.appendChild( p );
+    a.appendChild( d );
     child.appendChild( a );
   } );
 };
