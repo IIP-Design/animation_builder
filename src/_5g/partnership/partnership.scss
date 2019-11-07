@@ -60,21 +60,10 @@
       padding: 3rem;
     }
   }
-
-  &-array {
-    display: flex;
-    flex-direction: row;
-    margin-top: 3rem;
-    justify-content: space-evenly;
-  }
 }
 
 @media screen and (max-width: 768px) {
   .partnership {
-    &-array {
-      margin-top: 2rem;
-    }
-
     &-text {
       width: 90vw;
     }
@@ -110,12 +99,6 @@
         font-size: 1.1rem;
         padding: 1rem;
       }
-    }
-
-    &-array {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      flex-direction: column;
     }
   }
 }

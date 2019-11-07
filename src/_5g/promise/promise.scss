@@ -41,21 +41,6 @@
     margin-top: 2rem;
     width: 75vw;
   }
-
-  &-array {
-    display: flex;
-    flex-direction: row;
-    margin-top: 5rem;
-    justify-content: space-evenly;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .promise {
-    &-array {
-      margin-top: 3em;
-    }
-  }
 }
 
 @media screen and (max-width: 500px) {
@@ -71,11 +56,6 @@
     &-text {
       font-size: 1.1rem;
       width: 90vw;
-    }
-
-    &-array {
-      margin-top: 1em;
-      flex-direction: column;
     }
   }
 }
