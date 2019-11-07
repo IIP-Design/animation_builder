@@ -1,0 +1,22 @@
+.cdp-feed {
+  display: grid;
+  grid-column-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 3rem;
+  padding: 2rem 0;
+
+  &-item:hover {
+    cursor: pointer;
+  }
+
+  &-item-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+
+  &-item-title {
+    color: #ffffff;
+    font-weight: bold;
+  }
+}
