@@ -39,6 +39,10 @@
   }
 }
 
+a {
+  text-decoration: none;
+}
+
 .nav {
   margin: 20px 0px 20px 0;
 
@@ -141,7 +145,7 @@
       text-align: left;
     }
 
-    &-icon > img {
+    &-icon>img {
       width: 50px;
     }
 

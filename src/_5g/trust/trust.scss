@@ -58,13 +58,6 @@
     width: 565px;
     height: 301px;
   }
-
-  &-array {
-    display: flex;
-    flex-direction: row;
-    margin: 2rem 0rem 2rem 0rem;
-    justify-content: space-evenly;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -88,10 +81,6 @@
     &-image {
       align-self: center;
     }
-
-    &-array {
-      margin-top: 1em;
-    }
   }
 }
 
@@ -109,11 +98,6 @@
     &-image {
       width: 300px;
       height: 175px;
-    }
-
-    &-array {
-      margin-top: 1em;
-      flex-direction: column;
     }
   }
 }
