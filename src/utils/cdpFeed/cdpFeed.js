@@ -24,7 +24,6 @@ export const parseFeedData = async el => {
   const { id, source } = el.dataset;
 
   const data = await getFromCDP( source, id );
-  console.log( data );
 
   const image = data?.thumbnail?.sizes?.small?.url ? data.thumbnail.sizes.small.url : '';
   const imageAlt = data?.thumbnail?.alt ? data.thumbnail.alt : '';
