@@ -8,12 +8,12 @@ const fiveGPartials = partials.fiveG.join( '' );
 const iranPartials = partials.iran.join( '' );
 
 module.exports = {
-  fiveG: {
+  fiveg: {
     entry: {
-      fiveG: paths.fiveGIndex
+      fiveg: paths.fiveGIndex
     },
     output: {
-      filename: 'fiveG-animations.js'
+      filename: 'fiveg.js'
     },
     plugins: [
       new HtmlWebpackPlugin( {
@@ -27,7 +27,7 @@ module.exports = {
       iran: paths.iranIndex
     },
     output: {
-      filename: 'iran-animations.js'
+      filename: 'iran.js'
     },
     plugins: [
       new HtmlWebpackPlugin( {
@@ -41,7 +41,7 @@ module.exports = {
       example: paths.exampleIndex
     },
     output: {
-      filename: 'example-animations.js'
+      filename: 'example.js'
     },
     plugins: [
       new HtmlWebpackPlugin( {

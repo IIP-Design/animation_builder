@@ -7,8 +7,8 @@ const prodConfig = require( '../webpack.prod' );
 // Project specific configs
 const pageConfigs = require( './_configs' );
 
-const dev = merge( baseConfig, devConfig, pageConfigs.fiveG );
-const prod = merge( baseConfig, prodConfig, pageConfigs.fiveG );
+const dev = merge( baseConfig, devConfig, pageConfigs.fiveg );
+const prod = merge( baseConfig, prodConfig, pageConfigs.fiveg );
 
 module.exports = env => {
   if ( env === 'dev' ) {
