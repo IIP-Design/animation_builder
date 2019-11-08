@@ -1,7 +1,7 @@
 import './globals.scss';
 
 import './hero/hero';
-import './highlighted/highlighted';
+import './position/position';
 import './quiz/quiz';
 import './resources/resources';
 import './slides/slides';

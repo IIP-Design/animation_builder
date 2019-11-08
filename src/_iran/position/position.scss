@@ -1,0 +1,54 @@
+.position {
+  &-bg {
+    align-items: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &-text {
+    font-size: 1.75rem;
+    max-width: 50%;
+    padding: 0 3rem 3rem;
+    text-align: center;
+  }
+
+  &-title {
+    background-color: rgba($color: #ffffff, $alpha: 0.5);
+    font-size: 3rem;
+    margin: 0;
+    padding: 3rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .position {
+    &-text {
+      font-size: 1.5rem;
+      max-width: 90%;
+      padding: 1rem;
+    }
+
+    &-title {
+      font-size: 2.5rem;
+      padding: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .position {
+    &-text {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+
+    &-title {
+      font-size: 2.5rem;
+    }
+  }
+}
