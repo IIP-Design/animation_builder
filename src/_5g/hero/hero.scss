@@ -22,7 +22,16 @@
       font-weight: 400;
       letter-spacing: -0.75px;
       margin: 2rem 0 0;
-      max-width: 1164px;
+      text-align: center;
+    }
+
+    &-subtitle {
+      color: #ffffff;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: -0.75px;
+      margin: 1rem 0 0;
       text-align: center;
     }
 
@@ -90,6 +99,12 @@ a {
         text-align: center;
       }
 
+      &-subtitle {
+        font-size: 2rem;
+        margin: 1rem;
+        text-align: center;
+      }
+
       &-text {
         font-size: 1.5rem;
         margin: 1.5rem;
@@ -109,6 +124,11 @@ a {
     &-header {
       &-title {
         font-size: 2rem;
+        text-align: center;
+      }
+
+      &-subtitle {
+        font-size: 1.5rem;
         text-align: center;
       }
 
