@@ -68,6 +68,10 @@ hr.card-horizontal {
 .info-array {
   &-media {
     margin: 20px;
+
+    > img {
+      max-width: 100%;
+    }
   }
 
   &-text {

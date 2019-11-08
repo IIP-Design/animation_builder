@@ -154,7 +154,13 @@
 }
 
 @media screen and (max-width: 500px) {
-  .timeline-title {
-    padding: 20px 20px 0 20px;
+  .timeline {
+    &-title {
+      padding: 20px 20px 0 20px;
+    }
+
+    &-text {
+      font-size: 1rem;
+    }
   }
 }
