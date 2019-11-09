@@ -1,6 +1,8 @@
+@import '../colors.scss';
+
 .timeline {
   &-bg {
-    background-color: #f1f1f1;
+    background-color: $greyLightest;
     min-height: 730px;
     opacity: 0.8;
     width: 100%;
@@ -26,7 +28,7 @@
   }
 
   &-dot {
-    background-color: #0a314d;
+    background-color: $blueDark;
     border-radius: 50%;
     height: 37px;
     transform: translateY(-17.5px);
@@ -34,7 +36,7 @@
   }
 
   &-heading {
-    color: #063125;
+    color: $blueDark;
     font-size: 24px;
     font-weight: 800;
     max-height: 33px;
@@ -42,8 +44,8 @@
   }
 
   &-line {
-    background-color: #0a314d;
-    border: 3px solid #0a314d;
+    background-color: $blueDark;
+    border: 3px solid $blueDark;
     display: grid;
     grid-area: line;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -54,7 +56,7 @@
   }
 
   &-slide-title {
-    color: #ffffff;
+    color: $white;
     font-size: 5rem;
     font-weight: 800;
     padding-left: 5vw;
@@ -63,7 +65,7 @@
   }
 
   &-text {
-    color: #0a314d;
+    color: $blueDark;
     max-height: 75px;
     max-width: 250px;
     font-size: 18px;
@@ -72,7 +74,7 @@
   }
 
   &-title {
-    color: #000000;
+    color: $black;
     font-size: 2.5em;
     font-weight: 700;
     padding-top: 5rem;

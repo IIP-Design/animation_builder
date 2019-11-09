@@ -1,6 +1,8 @@
+@import '../colors.scss';
+
 .slide {
   align-items: center;
-  background-color: #323a45;
+  background-color: $greySlate;
   display: flex;
   height: calc(100% - 10rem);
   justify-content: center;
@@ -16,13 +18,13 @@
   }
 
   &-text {
-    color: #ffffff;
+    color: $white;
     font-size: 1.75rem;
     margin: 3rem 2rem;
   }
 
   &-title {
-    color: #ffffff;
+    color: $white;
     font-size: 3rem;
     margin: 4rem 2rem 3rem;
     text-align: center;
@@ -30,7 +32,7 @@
 }
 
 #slide-container {
-  background-color: #323a45;
+  background-color: $greySlate;
   height: 100vh;
   overflow: hidden;
   position: relative;

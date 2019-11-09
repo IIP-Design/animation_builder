@@ -1,10 +1,12 @@
+@import '../colors.scss';
+
 .promise {
   &-bg {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #062135;
+    background-color: $blueBlackPearl;
     min-height: 750px;
     position: relative;
     width: 100vw;
@@ -22,21 +24,21 @@
 
   &-title {
     font-size: 3rem;
-    color: #000000;
+    color: $black;
     text-align: center;
     margin-top: 2rem;
   }
 
   &-subtitle {
     font-size: 2rem;
-    color: #000000;
+    color: $black;
     text-align: center;
     margin-top: 0.5rem;
   }
 
   &-text {
     font-size: 1.5rem;
-    color: #000000;
+    color: $black;
     text-align: center;
     margin-top: 2rem;
     width: 75vw;

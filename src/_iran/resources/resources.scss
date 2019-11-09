@@ -1,12 +1,14 @@
+@import '../colors.scss';
+
 .card {
   &-section-bg {
-    background-color: #ffffff;
+    background-color: $white;
     position: relative;
   }
 
   &-section {
     &-title {
-      color: #000000;
+      color: $black;
       font-size: 2.5em;
       font-weight: 700;
       padding-top: 50px;
@@ -14,7 +16,7 @@
     }
 
     &-subtitle {
-      color: #000000;
+      color: $black;
       font-size: 24px;
       font-weight: 700;
       padding: 25px;
@@ -39,14 +41,14 @@
 
   &-button {
     background-size: cover;
-    border: 5px solid #063125;
-    color: #063125;
+    border: 5px solid $greenDark;
+    color: $greenDark;
     font-size: 30px;
     font-weight: 600;
     height: 200px;
     margin: 15px;
     padding: 50px;
-    text-decoration: none solid rgb(6, 49, 37);
+    text-decoration: none;
     text-align: center;
     width: 300px;
   }
@@ -59,7 +61,7 @@
 }
 
 hr.card-horizontal {
-  background-color: #666;
+  background-color: $greyMedium;
   height: 2px;
   max-width: 1200px;
   stroke-width: 2;
@@ -78,13 +80,13 @@ hr.card-horizontal {
     margin: 20px;
 
     &-title {
-      color: #000000;
+      color: $black;
       font-size: 24px;
       font-weight: 700;
     }
 
     &-content {
-      color: #000000;
+      color: $black;
       font-size: 20px;
       max-width: 650px;
     }
@@ -92,15 +94,15 @@ hr.card-horizontal {
 }
 
 .resources-link {
-  background-color: #dadada;
+  background-color: $greyLight;
   background-size: cover;
-  color: #000000;
+  color: $black;
   font-family: Arial;
   font-size: 14px;
   font-weight: 400;
   height: 182px;
   margin: 57px;
-  text-decoration: none solid rgb(0, 0, 0);
+  text-decoration: none solid $black;
   text-align: center;
   width: 296px;
 }

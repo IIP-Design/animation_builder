@@ -1,3 +1,5 @@
+@import '../colors.scss';
+
 .position {
   &-bg {
     align-items: center;
@@ -17,7 +19,7 @@
   }
 
   &-title {
-    background-color: rgba($color: #ffffff, $alpha: 0.5);
+    background-color: rgba($color: $white, $alpha: 0.5);
     font-size: 3rem;
     margin: 0;
     padding: 3rem;

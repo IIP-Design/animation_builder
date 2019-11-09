@@ -1,7 +1,9 @@
+@import '../colors.scss';
+
 .hero {
   &-content-background {
     align-items: center;
-    background-color: #001027;
+    background-color: $blueDarkest;
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: contain;
@@ -13,10 +15,9 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    min-height: 800px;
 
     &-title {
-      color: #ffffff;
+      color: $white;
       font-size: 4rem;
       font-style: normal;
       font-weight: 400;
@@ -26,7 +27,7 @@
     }
 
     &-subtitle {
-      color: #ffffff;
+      color: $white;
       font-size: 3rem;
       font-style: normal;
       font-weight: 400;
@@ -36,22 +37,17 @@
     }
 
     &-text {
-      color: #ffffff;
+      color: $white;
       display: flex;
       flex-direction: column;
       font-size: 1.3rem;
-      margin: 10vh 40vw 0 3rem;
+      margin: 10vh 40vw 10vh 3rem;
 
       > p {
         margin: 1rem 0;
       }
     }
   }
-}
-
-a {
-  text-decoration: none;
-  color: #000000;
 }
 
 .nav {
@@ -62,7 +58,7 @@ a {
     margin-top: 65px;
     margin-left: 75px;
     font-size: 2.5rem;
-    color: #000000;
+    color: $black;
   }
 
   &-array {
@@ -73,17 +69,19 @@ a {
   }
 
   &-button {
+    color: $black;
     align-items: center;
-    border: 1px solid #c7c4c3;
+    border: 1px solid $greySilver;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0.5rem;
     text-align: center;
+    text-decoration: none;
   }
 
   &-button:hover {
-    border: 3px solid #000000;
+    border: 3px solid $black;
   }
 
   &-text {

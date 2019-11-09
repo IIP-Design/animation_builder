@@ -1,7 +1,9 @@
+@import '../colors.scss';
+
 .partnership {
   &-bg {
     align-items: center;
-    background-color: #062135;
+    background-color: $blueBlackPearl;
     background-position: center center;
     background-size: cover;
     display: flex;
@@ -21,21 +23,21 @@
   }
 
   &-title {
-    color: #000000;
+    color: $black;
     font-size: 3rem;
     margin-top: 2rem;
     text-align: center;
   }
 
   &-subtitle {
-    color: #000000;
+    color: $black;
     font-size: 2rem;
     margin-top: 0.5rem;
     text-align: center;
   }
 
   &-text {
-    color: #000000;
+    color: $black;
     font-size: 1.5rem;
     margin-top: 2rem;
     text-align: center;
@@ -44,16 +46,16 @@
 
   &-quote {
     align-items: center;
-    background-color: #dadada;
+    background-color: $greyLight;
     background-repeat: repeat;
-    box-shadow: 1px 1px 5px rgba(241, 241, 241, 1);
+    box-shadow: 1px 1px 5px $greyLightest;
     display: flex;
     justify-content: center;
     margin: 3rem 0;
     width: 80%;
 
     &-text {
-      color: #002d74;
+      color: $blueBright;
       font-size: 1.5rem;
       padding: 3rem;
       text-align: center;

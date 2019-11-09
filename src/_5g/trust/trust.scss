@@ -1,7 +1,9 @@
+@import '../colors.scss';
+
 .trust {
   &-bg {
     align-items: center;
-    background-color: #002d74;
+    background-color: $blueBright;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -27,21 +29,21 @@
 
   &-title {
     font-size: 3rem;
-    color: #ffffff;
+    color: $white;
     text-align: center;
     margin-top: 2rem;
   }
 
   &-subtitle {
     font-size: 2rem;
-    color: #ffffff;
+    color: $white;
     text-align: center;
     margin-top: 0.5rem;
   }
 
   &-text {
     font-size: 1.2rem;
-    color: #ffffff;
+    color: $white;
     width: 40vw;
     text-align: left;
     flex-shrink: 1;
