@@ -48,6 +48,14 @@
       margin: 0;
     }
   }
+
+  &-opacity-overlay {
+    background-color: $white;
+    height: 100%;
+    opacity: 0.2;
+    position: absolute;
+    width: 100vw;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -79,6 +87,7 @@
 
     &-title {
       font-size: 2rem;
+      padding-top: 2rem;
     }
 
     &-item {

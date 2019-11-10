@@ -53,14 +53,14 @@ const runStats = () => {
 };
 
 // Set the animation trigger using Scroll Magic
-const start = document.querySelector( '.hero-content-background' );
+const start = document.querySelector( '.stats-box-bg' );
 
 const controller = new ScrollMagic.Controller();
 
 if ( start ) {
   new ScrollMagic.Scene( {
     triggerElement: start,
-    triggerHook: 'onLeave',
+    triggerHook: 'onCenter',
     duration: '100%'
   } )
     .setTween( runStats )
