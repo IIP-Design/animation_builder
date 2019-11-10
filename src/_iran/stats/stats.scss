@@ -1,10 +1,9 @@
 @import '../colors.scss';
 
-.iran-stats {
+.stats {
   &-box-bg {
     background-size: cover;
     background-attachment: fixed;
-    opacity: 0.8;
     width: 100vw;
     position: relative;
   }
@@ -52,7 +51,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .iran-stats {
+  .stats {
     &-array {
       flex-direction: column;
     }
@@ -72,7 +71,7 @@
 }
 
 @media screen and (max-width: 500px) {
-  .iran-stats {
+  .stats {
     &-array {
       padding-bottom: 50px;
       padding-top: 50px;
