@@ -62,9 +62,24 @@
 }
 
 @media screen and (max-width: 768px) {
-  .hero-content-background {
-    background-position: 75% top;
-    height: 75vh;
+  .hero {
+    &-background {
+      background-position: 95%;
+      height: 75vh;
+    }
+
+    &-container {
+      height: 75vh;
+    }
+
+    &-content {
+      margin: 28% 2rem 2rem;
+    }
+
+    &-title {
+      margin: 4rem;
+      text-align: center;
+    }
   }
 }
 
@@ -73,20 +88,47 @@
     &-title {
       text-align: center;
       font-size: 3rem;
+      margin: 2rem 1rem;
     }
 
     &-line {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
 
     &-content {
-      padding-top: 15vh;
+      margin: 50% 1rem 1rem;
+    }
 
-      &-background {
-        align-items: flex-start;
-        background-position: 80% top;
-        height: 80vh;
-      }
+    &-background {
+      background-position: 80% top;
+      height: 80vh;
+      transform: translateY(-3rem);
+    }
+
+    &-container {
+      height: 80vh;
+      background-color: $blueDark;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .hero {
+    &-title {
+      font-size: 2rem;
+      margin: 1rem;
+    }
+
+    &-line {
+      font-size: 1.2rem;
+    }
+
+    &-background {
+      height: 90vh;
+    }
+
+    &-container {
+      height: 90vh;
     }
   }
 }
