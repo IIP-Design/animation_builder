@@ -1,48 +1,54 @@
 @import '../colors.scss';
 
 .hero {
-  &-header {
-    align-items: flex-end;
-    background-color: $blueDark;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    width: 100vw;
-  }
-
   &-title {
     color: $white;
     font-size: 64px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: -0.75px;
-    margin: 2rem 0 0;
+    font-weight: 700;
+    margin: 6.5rem 4rem;
 
     &-highlight {
       color: $gold;
     }
   }
 
-  &-content-background {
-    align-items: center;
+  &-background {
     background-color: $blueDark;
-    background-position: center top;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
     height: 800px;
-    position: relative;
+    position: absolute;
+    transition: all 3s ease;
     width: 100vw;
+
+    &:hover {
+      transform: scale(1.5) translateX(-10rem) translateY(3rem);
+    }
+  }
+
+  &-container {
+    height: 800px;
+    overflow: hidden;
+    width: 100vw;
+  }
+
+  &-content {
+    margin-left: 4rem;
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
   }
 
   &-line {
     color: $white;
-    font-size: 30px;
+    font-size: 1.9rem;
     font-weight: 600;
     line-height: 1.6;
-    margin-bottom: 1em;
-    margin-left: 10vw;
+    margin-bottom: 1rem;
     max-width: 719px;
     min-height: 135px;
     opacity: 0;
