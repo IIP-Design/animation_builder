@@ -1,11 +1,11 @@
-@import '../colors.scss';
+@import '../../style/colors.scss';
 
 .timeline {
   &-bg {
     background-color: $greyLightest;
     min-height: 730px;
     opacity: 0.8;
-    width: 100%;
+    width: 100vw;
   }
 
   &-card {
