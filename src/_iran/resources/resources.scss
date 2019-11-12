@@ -3,6 +3,8 @@
 .card {
   &-section-bg {
     background-color: $white;
+    background-position: center top;
+    background-repeat: no-repeat;
     position: relative;
   }
 
