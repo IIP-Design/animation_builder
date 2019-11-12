@@ -29,7 +29,7 @@ if ( trigger && slideTwo && slideThree && slideFour && slideFive && slideSix && 
   new ScrollMagic.Scene( {
     triggerElement: trigger,
     triggerHook: 'onLeave',
-    duration: '300%'
+    duration: '2000%'
   } )
     .setPin( trigger )
     .setTween( wipe )

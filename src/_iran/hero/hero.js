@@ -7,5 +7,5 @@ const line = document.getElementsByClassName( 'hero-line' );
 const lineArray = [...line];
 
 lineArray.forEach( element => {
-  tl.to( element, 2, { opacity: 1 } ).to( element, 2, { opacity: 0, ease: Power2.easeIn }, '+=1' );
+  tl.to( element, 2.5, { opacity: 1 } ).to( element, 2.5, { opacity: 0, ease: Power2.easeIn }, '+=1' );
 } );
