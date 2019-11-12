@@ -13,7 +13,8 @@ module.exports = {
       fiveg: paths.fiveGIndex
     },
     output: {
-      filename: 'fiveg.js'
+      filename: 'fiveg.js',
+      path: `${paths.appDist}/fiveg`
     },
     plugins: [
       new HtmlWebpackPlugin( {
@@ -27,7 +28,8 @@ module.exports = {
       iran: paths.iranIndex
     },
     output: {
-      filename: 'iran.js'
+      filename: 'iran.js',
+      path: `${paths.appDist}/iran`
     },
     plugins: [
       new HtmlWebpackPlugin( {
@@ -41,7 +43,8 @@ module.exports = {
       example: paths.exampleIndex
     },
     output: {
-      filename: 'example.js'
+      filename: 'example.js',
+      path: `${paths.appDist}/example`
     },
     plugins: [
       new HtmlWebpackPlugin( {

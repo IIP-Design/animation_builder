@@ -1,5 +1,3 @@
-const paths = require( './paths' );
-
 module.exports = {
   module: {
     rules: [
@@ -20,9 +18,6 @@ module.exports = {
         ]
       }
     ]
-  },
-  output: {
-    path: paths.appDist
   },
   resolve: {
     extensions: ['*', '.js', '.jsx']
