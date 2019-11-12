@@ -6,6 +6,18 @@
   margin: 0 auto;
   padding: 2rem 0;
 
+  &.three {
+    grid-template-columns: repeat(3, 400px);
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(3, 200px);
+    }
+
+    @media screen and (max-width: 500px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
   &.single {
     grid-template-columns: 400px;
 
