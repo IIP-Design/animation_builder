@@ -4,7 +4,7 @@
   &-content-background {
     align-items: center;
     background-color: $blueDarkest;
-    background-position: center bottom;
+    background-position: right bottom;
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
@@ -43,7 +43,7 @@
       font-size: 1.3rem;
       margin: 10vh 40vw 10vh 3rem;
 
-      > p {
+      >p {
         margin: 1rem 0;
       }
     }
@@ -165,7 +165,7 @@
       text-align: left;
     }
 
-    &-icon > img {
+    &-icon>img {
       width: 50px;
     }
 
