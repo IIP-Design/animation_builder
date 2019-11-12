@@ -18,32 +18,29 @@
 
 // Read More Button
 .read-more {
+  background: $blueBright;
   border: 4px solid $white;
+  color: $white;
   font-size: 1rem;
-  color: #ffffff;
-  background: #002d74;
-  margin-top: 2rem;
+  margin: 2rem 0 1rem;
   padding: 1rem 1.75rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 
-  &-blue {
-    width: 157px;
-    height: 54px;
-    font-size: 1rem;
-    color: #002d74;
-    background-color: #ffffff;
-    border: 4px solid #002d74;
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.blue {
+    color: $blueBright;
+    background-color: $white;
+    border-color: $blueBright;
   }
 }
 
 // Reusable base button
 .card-button {
   align-items: center;
-  background-color: #dadada;
-  color: #000000;
+  background-color: $greyLight;
+  color: $black;
   display: flex;
   font-size: 14px;
   height: 182px;
@@ -53,7 +50,7 @@
   text-align: center;
 
   &:hover {
-    border: 2px solid #000000;
+    border: 2px solid $black;
   }
 
   @media screen and (max-width: 768px) {
