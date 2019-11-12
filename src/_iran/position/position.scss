@@ -5,9 +5,14 @@
     align-items: center;
     background-position: center top;
     background-repeat: no-repeat;
+    background-size: contain;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media screen and (min-width: 1925px) {
+      background-size: cover;
+    }
   }
 
   &-text {
