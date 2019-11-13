@@ -18,23 +18,40 @@
 
 // Read More Button
 .read-more {
-  background: $blueBright;
-  border: 4px solid $white;
+  border: 2px solid $white;
   color: $white;
-  font-size: 1rem;
-  margin: 2rem 0 1rem;
-  padding: 1rem 1.75rem;
+  background: none;
+  margin: 2rem 0 2rem;
+  padding: 0.5rem 1rem;
+  letter-spacing: 1.5px;
 
   &:hover {
     cursor: pointer;
   }
 
-  &.blue {
-    color: $blueBright;
-    background-color: $white;
-    border-color: $blueBright;
+  &.minimal {
+    border: none;
+    background: none;
+    color: $blueDark;
+    padding-left: 0;
+  }
+
+  &.red {
+    color: $blueDark;
+    border-color: $red;
   }
 }
+
+.arrow {
+  &-white {
+    color: $white;
+  }
+
+  &-red {
+    color: $red;
+  }
+}
+
 
 // Reusable base button
 .card-button {

@@ -38,7 +38,6 @@
 
   &-text {
     color: $black;
-    font-size: 1.5rem;
     margin-top: 2rem;
     text-align: center;
     width: 75vw;
@@ -56,7 +55,7 @@
 
     &-text {
       color: $blueBright;
-      font-size: 1.5rem;
+      font-size: 1rem;
       padding: 3rem;
       text-align: center;
     }
@@ -91,13 +90,13 @@
     }
 
     &-text {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     &-quote {
       &-text {
         margin: 1rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
         padding: 1rem;
       }
     }
