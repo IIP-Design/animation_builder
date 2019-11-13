@@ -52,7 +52,6 @@
   }
 }
 
-
 // Reusable base button
 .card-button {
   align-items: center;
@@ -81,14 +80,16 @@
   }
 }
 
-//Responsive Video Containers 
+//Responsive Video Containers
 
 .video {
-  width: 65vw;
-  text-align: center;
   margin: 0 auto;
+  max-width: 832px;
+  text-align: center;
+  width: 65vw;
 
   @media screen and (max-width: 768px) {
+    max-width: 519px;
     width: 75vw;
   }
 
