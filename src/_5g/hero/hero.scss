@@ -41,7 +41,7 @@
       font-size: 1rem;
       margin: 10vh 40vw 10vh 3rem;
 
-      >p {
+      > p {
         margin: 1rem 0;
       }
     }
@@ -82,7 +82,9 @@
   }
 
   &-text {
-    font-size: 1rem;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 0 0.5rem;
   }
 
   img {
@@ -96,6 +98,7 @@
       &-title {
         font-size: 3rem;
         margin: 1.5rem;
+        padding-top: 3rem;
         text-align: center;
       }
 
@@ -113,8 +116,16 @@
   }
 
   .nav {
+    &-array {
+      grid-column-gap: 0.5rem;
+    }
+
     &-button {
-      margin: 0.8rem;
+      margin: 0rem;
+    }
+
+    &-header {
+      font-size: 2.8rem;
     }
 
     img {
@@ -169,7 +180,7 @@
       margin: 1rem;
     }
 
-    &-icon>img {
+    &-icon > img {
       width: 50px;
     }
 

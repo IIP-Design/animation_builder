@@ -38,7 +38,8 @@
 
   &-text {
     color: $black;
-    margin-top: 2rem;
+    margin-top: 3rem;
+    max-width: 1191px;
     text-align: center;
     width: 75vw;
   }
@@ -50,8 +51,9 @@
     box-shadow: 1px 1px 5px $greyLightest;
     display: flex;
     justify-content: center;
+    max-width: 1191px;
     margin: 3rem 0;
-    width: 80%;
+    width: 80vw;
 
     &-text {
       color: $blueBright;
@@ -69,7 +71,12 @@
     }
 
     &-subtitle {
+      margin-bottom: 0;
       width: 90vw;
+    }
+
+    &-title {
+      margin: 2rem 0;
     }
 
     &-quote {
@@ -87,6 +94,7 @@
 
     &-subtitle {
       font-size: 1.5rem;
+      margin-bottom: 0;
     }
 
     &-text {
