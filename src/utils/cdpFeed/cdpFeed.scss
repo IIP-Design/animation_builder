@@ -3,18 +3,20 @@
   grid-column-gap: 2rem;
   grid-template-columns: repeat(2, 400px);
   justify-content: center;
+  max-width: calc(100vw - 6rem);
   margin: 0 auto;
   padding: 2rem 0;
 
   &.three {
-    grid-template-columns: repeat(3, 400px);
+    grid-template-columns: repeat(3, 1fr);
 
     @media screen and (max-width: 768px) {
-      grid-template-columns: repeat(3, 200px);
+      grid-template-columns: repeat(3, 1fr);
     }
 
     @media screen and (max-width: 500px) {
       grid-template-columns: 1fr;
+      max-width: calc(100vw - 2rem);
     }
   }
 
