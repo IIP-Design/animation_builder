@@ -24,14 +24,12 @@
 
   &-title {
     color: $black;
-    font-size: 3rem;
     margin-top: 2rem;
     text-align: center;
   }
 
   &-subtitle {
     color: $black;
-    font-size: 2rem;
     margin-top: 0.5rem;
     text-align: center;
   }
@@ -57,7 +55,7 @@
 
     &-text {
       color: $blueBright;
-      font-size: 1rem;
+      font-style: italic;
       padding: 3rem;
       text-align: center;
     }
@@ -88,23 +86,13 @@
 
 @media screen and (max-width: 500px) {
   .partnership {
-    &-title {
-      font-size: 2rem;
-    }
-
     &-subtitle {
-      font-size: 1.5rem;
       margin-bottom: 0;
-    }
-
-    &-text {
-      font-size: 1rem;
     }
 
     &-quote {
       &-text {
         margin: 1rem;
-        font-size: 1rem;
         padding: 1rem;
       }
     }

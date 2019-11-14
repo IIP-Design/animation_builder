@@ -3,11 +3,9 @@
 .trust {
   &-bg {
     align-items: center;
-    background-color: $blueBright;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    min-height: 750px;
     position: relative;
     width: 100vw;
   }
@@ -28,21 +26,18 @@
   }
 
   &-title {
-    font-size: 3rem;
     color: $black;
     text-align: center;
     margin-top: 2rem;
   }
 
   &-subtitle {
-    font-size: 2rem;
     color: $black;
     text-align: center;
     margin-top: 0.5rem;
   }
 
   &-text {
-    font-size: 1rem;
     color: $black;
     width: 75vw;
     text-align: center;
@@ -56,11 +51,6 @@
       margin-right: 2rem;
     }
   }
-
-  &-image {
-    max-width: 565px;
-    max-height: 301px;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -71,7 +61,6 @@
     }
 
     &-text {
-      font-size: 1rem;
       text-align: center;
       width: 90vw;
 
@@ -80,27 +69,13 @@
         margin: 2rem 0 0;
       }
     }
-
-    &-image {
-      align-self: center;
-    }
   }
 }
 
 @media screen and (max-width: 500px) {
   .trust {
-    &-title {
-      font-size: 2rem;
-    }
-
     &-subtitle {
-      font-size: 1.5rem;
       width: 90vw;
-    }
-
-    &-image {
-      width: 300px;
-      height: 175px;
     }
   }
 }
