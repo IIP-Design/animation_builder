@@ -2,16 +2,16 @@
 
 .promise {
   &-bg {
+    align-items: center;
+    background-position: center top;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-color: $blueBlackPearl;
     min-height: 750px;
+    padding-bottom: 3rem;
     position: relative;
     width: 100vw;
-    background-size: cover;
-    background-position: center top;
   }
 
   &-content {
@@ -19,38 +19,36 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-bottom: 3rem;
   }
 
   &-title {
     color: $black;
     text-align: center;
-    margin-top: 2rem;
   }
 
   &-subtitle {
     color: $black;
     text-align: center;
-    margin: 0.5rem 0 0;
+    margin: 1rem 0 0;
   }
 
   &-text {
     color: $black;
     text-align: center;
-    margin-top: 2rem;
+    margin: 2rem 0;
     max-width: 1191px;
-    width: 75vw;
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .promise-bg {
+    padding-bottom: 1rem;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .promise {
-    &-subtitle {
-      margin-bottom: 0;
-    }
-
-    &-text {
-      width: 90vw;
-    }
+  .promise-text {
+    width: 90vw;
   }
 }

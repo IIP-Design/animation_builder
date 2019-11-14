@@ -53,10 +53,10 @@
 }
 
 .nav {
-  margin: 20px 0px 20px 0;
+  margin: 0 0 5rem;
 
   &-header {
-    margin: 4rem 0 3rem 0;
+    margin: 2.75rem 0 1rem 0;
     color: $black;
     text-align: center;
   }
@@ -99,29 +99,33 @@
   .hero {
     &-header {
       &-title {
-        margin: 1.5rem;
+        margin: 1.5rem 1.5rem 0;
         padding-top: 3rem;
-        text-align: center;
       }
 
       &-subtitle {
         margin: 1rem;
-        text-align: center;
       }
 
       &-text {
-        margin: 1.5rem;
+        margin: 1rem 1.5rem 3rem;
       }
     }
   }
 
   .nav {
+    margin-bottom: 3rem;
+
     &-array {
       grid-column-gap: 0.5rem;
     }
 
     &-button {
       margin: 0rem;
+    }
+
+    &-header {
+      margin-top: 2rem;
     }
 
     img {

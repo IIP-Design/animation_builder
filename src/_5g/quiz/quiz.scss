@@ -3,7 +3,7 @@
 .tf {
   &-bg {
     background-color: $blueBlackPearl;
-    padding-bottom: 3rem;
+    padding: 2.75rem 0 3rem;
     position: relative;
     width: 100vw;
   }
@@ -79,15 +79,14 @@
 
     &-description {
       color: $white;
-      margin: 3rem auto;
+      margin: 2rem auto;
       max-width: 1191px;
       text-align: center;
-      width: 90vw;
     }
 
     &-title {
       color: $white;
-      margin: 0.5rem 0 0;
+      margin: 1rem 0 0;
       text-align: center;
     }
   }
@@ -95,7 +94,6 @@
   &-title {
     color: $white;
     margin: 0;
-    padding-top: 2rem;
     text-align: center;
     text-decoration: none;
   }
@@ -113,7 +111,7 @@
 @media screen and (max-width: 768px) {
   .tf {
     &-bg {
-      min-height: 5rem;
+      padding: 2rem 0 1rem;
     }
 
     &-buttons {
@@ -162,13 +160,14 @@
         max-width: 350px;
       }
 
-      &-title {
-        padding: 15px;
+      &-description {
+        margin: 2rem auto 1rem;
+        width: 90vw;
       }
-    }
 
-    &-title {
-      padding: 2rem 0;
+      &-title {
+        margin: 2rem 1rem 0;
+      }
     }
   }
 
