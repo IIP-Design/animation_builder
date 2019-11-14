@@ -48,7 +48,13 @@
 }
 
 @media screen and (max-width: 500px) {
-  .promise-text {
-    width: 90vw;
+  .promise {
+    &-subtitle {
+      margin: 1rem 1rem 0;
+    }
+
+    &-text {
+      width: 90vw;
+    }
   }
 }
