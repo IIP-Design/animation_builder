@@ -20,10 +20,12 @@
 .read-more {
   border: 2px solid $white;
   color: $white;
+  font-weight: 700;
   background: none;
-  margin: 2rem 0 2rem;
+  margin: 1rem 0 2rem;
   padding: 0.5rem 1rem;
   letter-spacing: 1.5px;
+  transition: 0.5s;
 
   &:hover {
     cursor: pointer;
@@ -39,16 +41,27 @@
   &.red {
     color: $blueDark;
     border-color: $red;
+
+    &:hover {
+      border: 2px solid rgba(208, 19, 25, .1);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 1rem 0 1rem;
   }
 }
 
+
 .arrow {
+
   &-white {
     color: $white;
   }
 
   &-red {
     color: $red;
+    font-size: 0.8rem;
   }
 }
 
