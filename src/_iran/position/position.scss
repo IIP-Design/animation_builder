@@ -5,18 +5,13 @@
     align-items: center;
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    @media screen and (min-width: 1925px) {
-      background-size: cover;
-    }
   }
 
   &-text {
-    font-size: 1.75rem;
     max-width: 75%;
     padding: 0 3rem 3rem;
     text-align: center;
@@ -24,7 +19,6 @@
 
   &-title {
     background-color: rgba($color: $white, $alpha: 0.5);
-    font-size: 3rem;
     margin: 0;
     padding: 3rem;
     text-align: center;

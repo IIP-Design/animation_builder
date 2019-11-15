@@ -35,22 +35,23 @@
   }
 
   &-card {
+    background-image: url(https://policystatic.state.gov/uploads/2019/11/wavy-bg.jpg);
+    background-repeat: repeat;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
     align-items: center;
-    color: $white;
+    color: $black;
     display: flex;
     height: 293px;
-    font-size: 1.2rem;
     font-weight: 600;
     justify-content: center;
     margin: 0 3rem;
     position: relative;
     text-align: center;
     text-decoration: none;
-    width: 545px;
+    width: 600px;
 
     &-face {
       align-items: center;
-      border: 5px solid $red;
       display: flex;
       height: 293px;
       justify-content: center;
@@ -90,8 +91,6 @@
 
   &-title {
     color: $white;
-    font-size: 2.5rem;
-    font-weight: 700;
     margin: 0;
     padding: 3rem 0;
     text-align: center;
