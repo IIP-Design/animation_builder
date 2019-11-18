@@ -12,17 +12,12 @@
   &-section {
     &-title {
       color: $black;
-      font-size: 2.5em;
-      font-weight: 700;
-      padding-top: 50px;
+      padding: 3rem 0;
       text-align: center;
     }
 
     &-subtitle {
       color: $black;
-      font-size: 24px;
-      font-weight: 700;
-      padding: 25px;
       text-align: center;
     }
 
@@ -40,21 +35,30 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 50px;
+    margin: 2rem 0;
   }
 
   &-button {
     background-size: cover;
     border: 5px solid $greenDark;
     color: $greenDark;
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: 600;
     height: 200px;
-    margin: 15px;
-    padding: 50px;
+    width: 300px;
+    margin: 1rem;
+    padding: 1rem;
     text-decoration: none;
     text-align: center;
-    width: 300px;
+
+    &:hover {
+      cursor: pointer;
+      color: $red;
+    }
+
+    &.active {
+      color: $red;
+    }
   }
 
   &-additional-resources {
@@ -75,24 +79,22 @@ hr.card-horizontal {
   &-media {
     margin: 20px;
 
-    >img {
+    > img {
       max-width: 100%;
     }
   }
 
   &-text {
     margin: 20px;
+    color: $black;
 
     &-title {
-      color: $black;
-      font-size: 24px;
+      font-size: 1.5rem;
       font-weight: 700;
     }
 
     &-content {
-      color: $black;
-      font-size: 20px;
-      max-width: 650px;
+      max-width: 60vw;
     }
   }
 }
@@ -122,20 +124,18 @@ hr.card-horizontal {
   }
 
   .card {
-    font-size: 20px;
-    height: 200px;
-    width: 200px;
-
-    &-array {
-      padding-bottom: 10px;
-    }
-
     &-button {
       font-size: 1rem;
-      margin: 10px;
-      padding: 10px;
       width: 200px;
-      height: auto;
+      height: 150px;
+    }
+  }
+
+  .info-array {
+    &-text {
+      &-content {
+        max-width: 90vw;
+      }
     }
   }
 
