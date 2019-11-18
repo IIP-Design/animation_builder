@@ -64,19 +64,19 @@ const goTo = where => {
 
   if ( where === 'next' && !isLast ) {
     currentItem++; // eslint-disable-line no-plusplus
-    toggleItems( cardArray, currentItem );
+    toggleItems( cardArray, currentItem, 'hidden' );
     updateCounter( counter, currentItem, cardArray.length );
   } else if ( where === 'next' && isLast ) {
     currentItem = 1;
-    toggleItems( cardArray, currentItem );
+    toggleItems( cardArray, currentItem, 'hidden' );
     updateCounter( counter, currentItem, cardArray.length );
   } else if ( where === 'prev' && !isFirst ) {
     currentItem--; // eslint-disable-line no-plusplus
-    toggleItems( cardArray, currentItem );
+    toggleItems( cardArray, currentItem, 'hidden' );
     updateCounter( counter, currentItem, cardArray.length );
   } else if ( where === 'prev' && isFirst ) {
     currentItem = cardArray.length;
-    toggleItems( cardArray, currentItem );
+    toggleItems( cardArray, currentItem, 'hidden' );
     updateCounter( counter, currentItem, cardArray.length );
   }
 };
@@ -96,7 +96,7 @@ const btnArray = [...buttons];
 if ( buttons && btnArray.length > 0 ) {
   btnArray.forEach( btn => {
     const navigateToBox = () => {
-      toggleItems( cardArray, btn.dataset.id );
+      toggleItems( cardArray, btn.dataset.id, 'hidden' );
       currentItem = Number( btn.dataset.id );
     };
 

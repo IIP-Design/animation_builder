@@ -41,8 +41,8 @@
 
   &-button {
     background-size: cover;
-    border: 5px solid $greenDark;
-    color: $greenDark;
+    border: 5px solid $blueBlackPearl;
+    color: $red;
     font-size: 1.5rem;
     font-weight: 600;
     height: 200px;
@@ -57,8 +57,8 @@
       color: $red;
     }
 
-    &.active {
-      color: $red;
+    &.inactive {
+      color: $blueBlackPearl;
     }
   }
 
@@ -81,7 +81,7 @@ hr.card-horizontal {
   &-media {
     margin: 1rem;
 
-    > img {
+    >img {
       max-width: 100%;
     }
   }
@@ -97,7 +97,7 @@ hr.card-horizontal {
     &-content {
       max-width: 60vw;
 
-      > p {
+      >p {
         margin: 1rem 0;
       }
     }
