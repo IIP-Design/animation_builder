@@ -3,8 +3,8 @@
 .hero {
   &-title {
     color: $white;
-    font-weight: 700;
-    margin: 6.5rem 4rem;
+    font-size: 3.5rem;
+    margin: 6.5rem 4rem 3rem;
 
     &-highlight {
       color: $gold;
@@ -72,11 +72,12 @@
     }
 
     &-content {
-      margin: 28% 2rem 2rem;
+      margin: 50% 2rem 2rem;
+      text-align: center;
     }
 
     &-title {
-      margin: 4rem;
+      margin: 4rem 2rem;
       text-align: center;
     }
   }
@@ -86,22 +87,21 @@
   .hero {
     &-title {
       text-align: center;
-      font-size: 3rem;
       margin: 2rem 1rem;
     }
 
     &-line {
       font-size: 1.4rem;
+      margin: 0 1rem;
     }
 
     &-content {
-      margin: 25% 1rem 1rem;
+      margin: 80% 1rem 1rem;
     }
 
     &-background {
       background-position: 80% top;
       height: 80vh;
-      transform: translateY(-3rem);
     }
 
     &-container {
@@ -114,7 +114,7 @@
 @media screen and (max-width: 360px) {
   .hero {
     &-title {
-      font-size: 2rem;
+      font-size: 3rem;
       margin: 1rem;
     }
 
@@ -123,7 +123,7 @@
     }
 
     &-background {
-      height: 90vh;
+      height: 80vh;
     }
 
     &-container {

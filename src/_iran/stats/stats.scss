@@ -2,16 +2,18 @@
 
 .stats {
   &-box-bg {
+    background-position: center;
     background-size: cover;
-    background-attachment: fixed;
-    width: 100vw;
+    background-repeat: no-repeat;
+    padding: 0 0 5rem;
     position: relative;
+    width: 100vw;
   }
 
   &-title {
     color: $white;
+    padding-top: 2.75rem;
     text-align: center;
-    padding-top: 10vh;
   }
 
   &-array {
@@ -19,14 +21,13 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-content: center;
-    padding-bottom: 150px;
-    padding-top: 100px;
+    padding: 3.5rem 0;
   }
 
   &-item {
     border: 5px solid $white;
-    padding: 40px;
-    margin: 10px;
+    padding: 2rem;
+    margin: 0.5rem;
 
     &-percent {
       font-size: 80px;
@@ -50,7 +51,7 @@
   &-opacity-overlay {
     background-color: $white;
     height: 100%;
-    opacity: 0.2;
+    opacity: 0.1;
     position: absolute;
     width: 100vw;
   }
@@ -60,14 +61,10 @@
   .stats {
     &-array {
       flex-direction: column;
-      padding-bottom: 10vh;
-      padding-top: 25px;
     }
 
     &-box-bg {
-      background-size: cover;
-      background-position: center;
-      background-attachment: unset;
+      padding-bottom: 1rem;
     }
   }
 
@@ -83,11 +80,6 @@
     &-array {
       padding-bottom: 50px;
       padding-top: 50px;
-    }
-
-    &-title {
-      font-size: 2rem;
-      padding-top: 2rem;
     }
 
     &-item {

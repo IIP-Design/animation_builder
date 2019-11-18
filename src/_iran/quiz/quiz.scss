@@ -3,7 +3,10 @@
 .tf {
   &-bg {
     background-color: $blueBlackPearl;
-    min-height: 750px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2.75rem 0 3rem;
     position: relative;
     width: 100vw;
   }
@@ -11,17 +14,17 @@
   &-buttons {
     display: flex;
     justify-content: center;
-    padding: 50px 0px 50px 0px;
+    padding: 1.5rem 0;
   }
 
   &-button {
     background-color: $blueDark;
     background-size: cover;
     color: $white;
-    font-size: 14px;
+    font-size: 0.8rem;
     font-weight: 400;
     height: 72px;
-    margin: 15px;
+    margin: 0.5rem;
     text-align: center;
     width: 166px;
   }
@@ -73,26 +76,23 @@
     justify-content: center;
 
     &-arrow {
-      background-color: $blueBlackPearl;
+      background-color: transparent;
       border: none;
       color: $white;
       font-size: 8rem;
     }
+  }
 
-    &-title {
-      color: $white;
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin: 0;
-      padding-bottom: 3rem;
-      text-align: center;
-    }
+  &-subtitle {
+    color: $white;
+    margin: 1rem 0 0;
+    padding-bottom: 3rem;
+    text-align: center;
   }
 
   &-title {
     color: $white;
     margin: 0;
-    padding: 3rem 0;
     text-align: center;
     text-decoration: none solid $white;
   }
@@ -104,10 +104,6 @@
 
 @media screen and (max-width: 768px) {
   .tf {
-    &-bg {
-      min-height: 5rem;
-    }
-
     &-buttons {
       display: none;
     }
@@ -153,14 +149,6 @@
       &-box {
         max-width: 350px;
       }
-
-      &-title {
-        padding: 15px;
-      }
-    }
-
-    &-title {
-      padding: 2rem 0;
     }
   }
 
@@ -193,10 +181,6 @@
 
     &-carousel-arrow {
       font-size: 3rem;
-    }
-
-    &-title {
-      font-size: 2rem;
     }
   }
 

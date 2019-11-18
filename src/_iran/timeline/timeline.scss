@@ -3,8 +3,7 @@
 .timeline {
   &-bg {
     background-color: $greyLightest;
-    min-height: 730px;
-    opacity: 0.8;
+    padding: 2.75rem 0 5rem;
     width: 100vw;
   }
 
@@ -23,7 +22,7 @@
       'bottom1 . bottom2 .';
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 0 auto;
-    padding: 10rem 0;
+    padding: 5rem 0;
     width: 95%;
   }
 
@@ -74,8 +73,6 @@
   }
 
   &-title {
-    color: $black;
-    padding-top: 5rem;
     text-align: center;
   }
 }
@@ -128,7 +125,11 @@
     }
 
     &-slide-title {
-      font-size: 3em;
+      font-size: 3rem;
+    }
+
+    &-title {
+      margin: 0 1rem 0;
     }
   }
 
@@ -149,18 +150,6 @@
 
     > .timeline-text {
       text-align: left;
-    }
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .timeline {
-    &-title {
-      padding: 20px 20px 0 20px;
-    }
-
-    &-text {
-      font-size: 1rem;
     }
   }
 }
