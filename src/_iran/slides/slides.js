@@ -1,5 +1,5 @@
 import ScrollMagic from 'scrollmagic';
-import { Linear, TimelineLite, CSSRulePlugin } from 'gsap';
+import { Linear, TimelineLite } from 'gsap';
 
 // eslint-disable-next-line import/no-unresolved
 import 'imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
