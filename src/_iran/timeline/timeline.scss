@@ -36,7 +36,7 @@
 
   &-heading {
     color: $blueDark;
-    font-size: 24px;
+    font-size: 1.2rem;
     font-weight: 800;
     max-height: 33px;
     max-width: 128px;
@@ -67,7 +67,7 @@
     color: $blueDark;
     max-height: 75px;
     max-width: 250px;
-    font-size: 18px;
+    font-size: 0.9rem;
     font-weight: 600;
     text-align: center;
   }
@@ -98,6 +98,10 @@
 
 @media screen and (max-width: 768px) {
   .timeline {
+    &-bg {
+      padding-bottom: 0;
+    }
+
     &-container {
       grid-template-areas:
         'bottom1 line .'
@@ -125,7 +129,7 @@
     }
 
     &-slide-title {
-      font-size: 3rem;
+      font-size: 4rem;
     }
 
     &-title {
@@ -150,6 +154,18 @@
 
     > .timeline-text {
       text-align: left;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .timeline {
+    &-container {
+      padding: 3rem 0;
+    }
+
+    &-slide-title {
+      font-size: 3rem;
     }
   }
 }
