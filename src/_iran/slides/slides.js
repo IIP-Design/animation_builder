@@ -80,6 +80,3 @@ const updateProgress = e => {
 dotArray.forEach(dot => {
   dot.addEventListener('click', e => updateProgress(e));
 });
-
-const scrollPos = controller.scrollPos();
-console.log(scrollPos);
