@@ -10,6 +10,11 @@
     width: 100vw;
   }
 
+  &-container {
+    background-color: rgba($color: #062135, $alpha: 0.6);
+    width: 100vw;
+  }
+
   &-title {
     color: $white;
     padding-top: 2.75rem;

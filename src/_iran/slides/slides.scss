@@ -21,6 +21,12 @@
   }
 
   &-dot {
+    border: solid 3px white;
+    border-radius: 1rem;
+    height: 2rem;
+    width: 2rem;
+    transition: 0.7s;
+
     &:not(:first-of-type) {
       margin-left: 0.5rem;
     }
@@ -40,7 +46,7 @@
     max-width: 1191px;
     font-size: 2rem;
 
-    > p {
+    >p {
       font-weight: bold;
       line-height: 2.5rem;
       margin: 1rem;
@@ -82,11 +88,16 @@
       justify-content: flex-end;
     }
 
+    &-dot {
+      height: 1rem;
+      width: 1rem;
+    }
+
     &-text {
       font-size: 1rem;
       margin: 1rem 0.5rem 4rem;
 
-      > p {
+      >p {
         line-height: 1.5rem;
       }
     }
@@ -94,23 +105,5 @@
     &-title {
       margin: 2rem -49vw 0;
     }
-  }
-}
-
-#slide-dot-one,
-#slide-dot-two,
-#slide-dot-three,
-#slide-dot-four,
-#slide-dot-five,
-#slide-dot-six,
-#slide-dot-seven {
-  border: solid 3px white;
-  border-radius: 1rem;
-  height: 2rem;
-  width: 2rem;
-
-  @media screen and (max-width: 500px) {
-    height: 1rem;
-    width: 1rem;
   }
 }
