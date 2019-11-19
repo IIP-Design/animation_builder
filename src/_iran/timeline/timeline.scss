@@ -3,7 +3,7 @@
 .timeline {
   &-bg {
     background-color: $greyLightest;
-    padding: 2.75rem 0 5rem;
+    padding: 0 0 5rem;
     width: 100vw;
   }
 
@@ -22,6 +22,7 @@
       'bottom1 . bottom2 .';
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 0 auto;
+    position: relative;
     padding: 5rem 0;
     width: 95%;
   }
@@ -54,12 +55,24 @@
     width: 100%;
   }
 
+  &-overlay {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    opacity: 0.2;
+    padding: 2.75rem 0 5rem;
+    position: absolute;
+    width: 100%;
+    display: none;
+  }
+
   &-slide-title {
     color: $white;
     font-size: 5rem;
     font-weight: 800;
     padding-left: 5vw;
     padding-top: 3vh;
+    position: relative;
     text-transform: uppercase;
   }
 
@@ -73,6 +86,8 @@
   }
 
   &-title {
+    padding-top: 2.75rem;
+    position: relative;
     text-align: center;
   }
 }
@@ -165,7 +180,7 @@
     }
 
     &-slide-title {
-      font-size: 3rem;
+      display: none;
     }
   }
 }

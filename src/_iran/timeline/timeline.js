@@ -14,6 +14,7 @@ const distanceFromTop = timelineSection.getBoundingClientRect().top;
 // Get all elements upons which we will be acting
 const cards = [...document.getElementsByClassName( 'timeline-card' )];
 const dots = [...document.getElementsByClassName( 'timeline-dot' )];
+const images = [...document.getElementsByClassName( 'timeline-overlay' )];
 const titles = [...document.getElementsByClassName( 'timeline-slide-title' )];
 
 // Set color values
@@ -28,7 +29,7 @@ const runTimeline = ( arr1, arr2, arr3 ) => {
   // Initialize timelines
   const tlDots = new TimelineMax( { repeat: -1 } );
   const tlText = new TimelineMax( { repeat: -1 } );
-  const tlTitle = new TimelineMax( { repeat: -1 } );
+  const tlPhoto = new TimelineMax( { repeat: -1 } );
 
   arr1.forEach( el => {
     tlDots.fromTo( el, 2, inactiveBg, activeBg ).to( el, 2, inactiveBg );
@@ -41,7 +42,12 @@ const runTimeline = ( arr1, arr2, arr3 ) => {
   } );
 
   arr3.forEach( el => {
-    tlTitle.fromTo( el, 2, { display: 'none' }, { display: 'block' } ).to( el, 2, { display: 'none' } );
+    if ( el?.dataset?.photo ) {
+      const activePhoto = { display: 'block', backgroundImage: `url('${el.dataset.photo}')` };
+      const inactivePhoto = { display: 'none' };
+
+      tlPhoto.to( el, 2, activePhoto ).to( el, 2, inactivePhoto );
+    }
   } );
 };
 
@@ -52,14 +58,14 @@ const playWhenAtTop = e => {
   if (
     cards &&
     dots &&
-    titles &&
+    images &&
     cards.length > 0 &&
     dots.length > 0 &&
-    titles.length > 0 &&
+    images.length > 0 &&
     timelineSection &&
     off >= distanceFromTop
   ) {
-    runTimeline( dots, cards, titles );
+    runTimeline( dots, cards, images );
     document.removeEventListener( 'scroll', playWhenAtTop );
     document.removeEventListener( 'touchmove', playWhenAtTop );
   }
@@ -106,6 +112,20 @@ const hoverEffect = el => {
           title.setAttribute( 'style', 'display: block' );
         } else {
           title.setAttribute( 'style', 'display: none' );
+        }
+      }
+    } );
+
+    images.forEach( image => {
+      if ( image?.dataset?.year ) {
+        if ( image.dataset.year === year ) {
+          if ( image.dataset.photo ) {
+            const { photo } = image.dataset;
+
+            image.setAttribute( 'style', `display: block; background-image: url('${photo}')` );
+          }
+        } else {
+          image.setAttribute( 'style', 'display: none' );
         }
       }
     } );
