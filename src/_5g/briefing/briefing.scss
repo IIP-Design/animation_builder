@@ -1,49 +1,40 @@
 @import '../../style/colors.scss';
 
-.card {
-  background-color: $white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
-  margin: 2.5rem 0;
-  max-width: 1350px;
-  width: 90vw;
-
+.briefing {
   &-content {
-    align-items: center;
-    display: grid;
-    grid-column-gap: 2rem;
-    grid-template-columns: 1fr 2fr;
-    max-width: 100%;
-    margin: 0 2rem;
+    background-color: $white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
+    margin: 2.5rem 0;
+    max-width: 1350px;
+    width: 90vw;
   }
 
-  &-section {
-    &-bg {
-      background-color: $white;
-      background-repeat: repeat;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  &-bg {
+    background-color: $white;
+    background-repeat: repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    &-title {
-      padding: 2.75rem 0 0;
-      text-align: center;
-    }
+  &-title {
+    padding: 2.75rem 0 0;
+    text-align: center;
+  }
 
-    &-subtitle {
-      margin-top: 1rem;
-      text-align: center;
-    }
+  &-subtitle {
+    margin-top: 1rem;
+    text-align: center;
+  }
 
-    &-info-array {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 2rem;
-    }
+  &-info-array {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
   }
 
   &-array {
@@ -70,10 +61,14 @@
     border-right: none;
     border-left: none;
 
-    &:hover {
-      cursor: pointer;
-      color: $gold;
+    &:focus {
+      outline: none;
     }
+
+    // &:hover {
+    //   cursor: pointer;
+    //   color: $gold;
+    // }
 
     &.inactive {
       border-bottom: none;
@@ -92,7 +87,7 @@
   &-media {
     margin: 1rem;
 
-    >img {
+    > img {
       max-width: 100%;
     }
   }
@@ -109,7 +104,7 @@
     }
 
     &-content {
-      >p {
+      > p {
         margin: 1rem 0;
       }
     }
@@ -117,7 +112,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .card {
+  .briefing {
     &-array {
       flex-direction: row;
       flex-wrap: nowrap;
@@ -131,10 +126,9 @@
       grid-row-gap: 2rem;
       grid-template-columns: 1fr;
       justify-content: center;
-      margin: 0 1rem;
     }
 
-    &-section-subtitle {
+    &-subtitle {
       margin: 1rem 1rem 0;
     }
   }
@@ -151,7 +145,7 @@
 }
 
 @media screen and (max-width: 500px) {
-  hr.card-horizontal {
+  hr.briefing-horizontal {
     display: none;
   }
 
@@ -159,7 +153,7 @@
     display: block !important;
   }
 
-  .card {
+  .briefing {
     &-array {
       display: none;
     }
@@ -168,23 +162,16 @@
       margin: 0;
     }
 
-    &-section {
-      &-additional-resources {
-        display: flex;
-        flex-direction: column;
-      }
+    &-bg {
+      margin-bottom: 2rem;
+    }
 
-      &-bg {
-        margin-bottom: 2rem;
-      }
+    &-info-array {
+      margin: 1rem;
+    }
 
-      &-info-array {
-        margin: 1rem;
-      }
-
-      &-subtitle {
-        margin: 1rem;
-      }
+    &-subtitle {
+      margin: 1rem;
     }
 
     &-button {
