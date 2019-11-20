@@ -1,0 +1,191 @@
+@import '../../style/colors.scss';
+
+.briefing {
+  &-content {
+    background-color: $white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
+    margin: 2.5rem 0;
+    max-width: 1350px;
+    width: 90vw;
+  }
+
+  &-bg {
+    background-color: $white;
+    background-repeat: repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-title {
+    padding: 2.75rem 0 0;
+    text-align: center;
+  }
+
+  &-subtitle {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  &-info-array {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  &-array {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: $white;
+    border-bottom: 1px solid $greyLight;
+  }
+
+  &-button {
+    background-color: $white;
+    color: $black;
+    font-size: 1rem;
+    font-weight: 600;
+    height: 100px;
+    width: 300px;
+    padding: 1rem;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 2px solid $gold;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    // &:hover {
+    //   cursor: pointer;
+    //   color: $gold;
+    // }
+
+    &.inactive {
+      border-bottom: none;
+      color: $greyMedium;
+    }
+  }
+
+  &-additional-resources {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.info-array {
+  &-media {
+    margin: 1rem;
+
+    > img {
+      max-width: 100%;
+    }
+  }
+
+  &-text {
+    margin: 1rem;
+    text-align: center;
+
+    &-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      padding-bottom: 2rem;
+      line-height: 1.2;
+    }
+
+    &-content {
+      > p {
+        margin: 1rem 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .briefing {
+    &-array {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+
+    &-button {
+      font-size: 1rem;
+    }
+
+    &-content {
+      grid-row-gap: 2rem;
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+
+    &-subtitle {
+      margin: 1rem 1rem 0;
+    }
+  }
+
+  .info-array {
+    &-text {
+      margin: 0 1rem;
+
+      &-content {
+        max-width: 90vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  hr.briefing-horizontal {
+    display: none;
+  }
+
+  .hidden {
+    display: block !important;
+  }
+
+  .briefing {
+    &-array {
+      display: none;
+    }
+
+    &-content {
+      margin: 0;
+    }
+
+    &-bg {
+      margin-bottom: 2rem;
+    }
+
+    &-info-array {
+      margin: 1rem;
+    }
+
+    &-subtitle {
+      margin: 1rem;
+    }
+
+    &-button {
+      height: 75px;
+      padding: 0;
+      width: 200px;
+    }
+  }
+
+  .info-array-text {
+    margin-bottom: 0;
+
+    &-title {
+      text-align: center;
+    }
+  }
+}
