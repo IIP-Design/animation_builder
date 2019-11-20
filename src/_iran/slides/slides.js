@@ -72,10 +72,10 @@ if ( trigger && slideTwo && slideThree && slideFour && slideFive && slideSix && 
     .addTo( controller );
 }
 
-const updateProgress = e => {
-  wipe.play( e.target.id, false );
-};
+// const updateProgress = e => {
+//   wipe.play( e.target.id, false );
+// };
 
-dots.forEach( dot => {
-  dot.addEventListener( 'click', e => updateProgress( e ) );
-} );
+// dots.forEach( dot => {
+//   dot.addEventListener( 'click', e => updateProgress( e ) );
+// } );
