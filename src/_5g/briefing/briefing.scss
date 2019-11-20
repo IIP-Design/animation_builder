@@ -10,12 +10,13 @@
   }
 
   &-bg {
+    align-items: center;
     background-color: $white;
     background-repeat: repeat;
-    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding-bottom: 2.25rem;
+    position: relative;
   }
 
   &-title {
@@ -163,7 +164,7 @@
     }
 
     &-bg {
-      margin-bottom: 2rem;
+      padding-bottom: 3rem;
     }
 
     &-info-array {
