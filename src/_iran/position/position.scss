@@ -17,14 +17,20 @@
   }
 
   &-text {
-    margin-top: 3rem;
+    margin-top: 0.5rem;
     max-width: 1191px;
     text-align: center;
 
-    > p {
+    &-strong {
       font-size: 1.5rem;
+      font-weight: bold;
       line-height: 1.5;
       margin: 1rem 0;
+    }
+
+    &-normal {
+      font-size: 1.2rem;
+      line-height: 1.5;
     }
   }
 
@@ -45,9 +51,12 @@
 
 @media screen and (max-width: 500px) {
   .position-text {
-    > p {
+    &-normal {
       font-size: 1rem;
-      line-height: 1.5;
+    }
+
+    &-strong {
+      font-size: 1.2rem;
     }
   }
 }

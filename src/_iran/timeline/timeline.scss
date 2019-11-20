@@ -58,7 +58,7 @@
   &-overlay {
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+    height: 120%;
     opacity: 0;
     padding: 2.75rem 0 5rem;
     position: absolute;
@@ -144,10 +144,6 @@
       width: 1px;
     }
 
-    &-overlay {
-      height: 100%;
-    }
-
     &-slide-title {
       display: none;
     }
@@ -182,6 +178,10 @@
   .timeline {
     &-container {
       padding: 3rem 0;
+    }
+
+    &-overlay {
+      height: 150%;
     }
   }
 }
