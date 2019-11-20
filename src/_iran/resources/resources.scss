@@ -4,11 +4,11 @@
   &-section {
     &-bg {
       background-color: $white;
-      background-position: center top;
-      background-repeat: no-repeat;
-      background-size: contain;
-      margin-bottom: 3rem;
+      background-repeat: repeat;
       position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     &-title {
@@ -36,29 +36,31 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 3rem 0;
+    background-color: $white;
+    border-bottom: 1px solid $blueBlackPearl;
   }
 
   &-button {
-    background-size: cover;
-    border: 5px solid $blueBlackPearl;
-    color: $red;
-    font-size: 1.5rem;
+    color: $black;
+    font-size: 1rem;
     font-weight: 600;
-    height: 200px;
+    height: 100px;
     width: 300px;
-    margin: 1rem;
     padding: 1rem;
     text-decoration: none;
     text-align: center;
+    border-bottom: 2px solid $gold;
+    border-top: none;
+    border-right: none;
+    border-left: none;
 
     &:hover {
       cursor: pointer;
-      color: $red;
+      color: $gold;
     }
 
     &.inactive {
-      color: $blueBlackPearl;
+      border-bottom: none;
     }
   }
 
@@ -69,12 +71,11 @@
   }
 }
 
-hr.card-horizontal {
-  background-color: $greyMedium;
-  height: 2px;
-  margin: 0 auto;
-  max-width: 1200px;
-  stroke-width: 2;
+.card {
+  background-color: $white;
+  width: 90vw;
+  margin: 2.5rem 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
 }
 
 .info-array {
@@ -119,10 +120,6 @@ hr.card-horizontal {
 }
 
 @media screen and (max-width: 768px) {
-  hr.card-horizontal {
-    max-width: 500px;
-  }
-
   .card {
     &-array {
       flex-direction: row;
