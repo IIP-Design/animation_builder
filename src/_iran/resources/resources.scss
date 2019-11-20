@@ -1,6 +1,21 @@
 @import '../../style/colors.scss';
 
 .card {
+  background-color: $white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
+  margin: 2.5rem 0;
+  max-width: 1350px;
+  width: 90vw;
+
+  &-content {
+    align-items: center;
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-template-columns: 1fr 2fr;
+    max-width: 100%;
+    margin: 0 2rem;
+  }
+
   &-section {
     &-bg {
       background-color: $white;
@@ -37,10 +52,11 @@
     flex-wrap: wrap;
     justify-content: center;
     background-color: $white;
-    border-bottom: 1px solid $blueBlackPearl;
+    border-bottom: 1px solid $greyLight;
   }
 
   &-button {
+    background-color: $white;
     color: $black;
     font-size: 1rem;
     font-weight: 600;
@@ -61,6 +77,7 @@
 
     &.inactive {
       border-bottom: none;
+      color: $greyMedium;
     }
   }
 
@@ -71,18 +88,11 @@
   }
 }
 
-.card {
-  background-color: $white;
-  width: 90vw;
-  margin: 2.5rem 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
-}
-
 .info-array {
   &-media {
     margin: 1rem;
 
-    >img {
+    > img {
       max-width: 100%;
     }
   }
@@ -98,25 +108,11 @@
     &-content {
       max-width: 60vw;
 
-      >p {
+      > p {
         margin: 1rem 0;
       }
     }
   }
-}
-
-.resources-link {
-  background-color: $greyLight;
-  background-size: cover;
-  color: $black;
-  font-family: Arial;
-  font-size: 14px;
-  font-weight: 400;
-  height: 182px;
-  margin: 57px;
-  text-decoration: none solid $black;
-  text-align: center;
-  width: 296px;
 }
 
 @media screen and (max-width: 768px) {
@@ -128,8 +124,13 @@
 
     &-button {
       font-size: 1rem;
-      width: 200px;
-      height: 150px;
+    }
+
+    &-content {
+      grid-row-gap: 2rem;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      margin: 0 1rem;
     }
 
     &-section-subtitle {
@@ -139,14 +140,12 @@
 
   .info-array {
     &-text {
+      margin: 0 1rem;
+
       &-content {
         max-width: 90vw;
       }
     }
-  }
-
-  .resources-link {
-    margin: 15px;
   }
 }
 
@@ -164,6 +163,10 @@
       display: none;
     }
 
+    &-content {
+      margin: 0;
+    }
+
     &-section {
       &-additional-resources {
         display: flex;
@@ -175,7 +178,7 @@
       }
 
       &-info-array {
-        margin: 0 0 1rem;
+        margin: 1rem;
       }
 
       &-subtitle {
