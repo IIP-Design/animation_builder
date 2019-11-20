@@ -10,6 +10,10 @@
     width: 100vw;
   }
 
+  &-container {
+    position: relative;
+  }
+
   &-title {
     color: $white;
     padding-top: 2.75rem;
@@ -49,9 +53,9 @@
   }
 
   &-opacity-overlay {
-    background-color: $white;
+    background-color: $blueBlackPearl;
     height: 100%;
-    opacity: 0.1;
+    opacity: 0.6;
     position: absolute;
     width: 100vw;
   }
