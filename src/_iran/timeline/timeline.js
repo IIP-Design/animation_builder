@@ -43,10 +43,14 @@ const runTimeline = ( arr1, arr2, arr3 ) => {
 
   arr3.forEach( el => {
     if ( el?.dataset?.photo ) {
-      const activePhoto = { display: 'block', backgroundImage: `url('${el.dataset.photo}')` };
-      const inactivePhoto = { display: 'none' };
+      const activePhoto = {
+        backgroundImage: `url('${el.dataset.photo}')`,
+        opacity: 0.2,
+        visibility: 'visible'
+      };
+      const inactivePhoto = { opacity: 0, visibility: 'hidden' };
 
-      tlPhoto.to( el, 2, activePhoto ).to( el, 2, inactivePhoto );
+      tlPhoto.fromTo( el, 3.9, inactivePhoto, activePhoto ).to( el, 0.1, inactivePhoto );
     }
   } );
 };
@@ -122,10 +126,13 @@ const hoverEffect = el => {
           if ( image.dataset.photo ) {
             const { photo } = image.dataset;
 
-            image.setAttribute( 'style', `display: block; background-image: url('${photo}')` );
+            image.setAttribute(
+              'style',
+              `background-image: url('${photo}'); opacity: 0.2; visibility: visible; `
+            );
           }
         } else {
-          image.setAttribute( 'style', 'display: none' );
+          image.setAttribute( 'style', 'opacity: 0; visibility: hidden;' );
         }
       }
     } );

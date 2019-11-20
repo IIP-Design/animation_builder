@@ -59,11 +59,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    opacity: 0.2;
+    opacity: 0;
     padding: 2.75rem 0 5rem;
     position: absolute;
+    transition: visibility 0.2s, opacity 0.2s linear;
+    visibility: hidden;
     width: 100%;
-    display: none;
   }
 
   &-slide-title {
@@ -143,8 +144,12 @@
       width: 1px;
     }
 
+    &-overlay {
+      height: 100%;
+    }
+
     &-slide-title {
-      font-size: 4rem;
+      display: none;
     }
 
     &-title {
@@ -177,10 +182,6 @@
   .timeline {
     &-container {
       padding: 3rem 0;
-    }
-
-    &-slide-title {
-      display: none;
     }
   }
 }
