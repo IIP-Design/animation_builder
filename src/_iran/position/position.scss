@@ -2,13 +2,9 @@
 
 .position {
   &-bg {
-    align-items: center;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: contain;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding-bottom: 4rem;
 
     @media screen and (min-width: 1198px) {
@@ -16,9 +12,25 @@
     }
   }
 
+  &-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &-opacity-overlay {
+    background-color: $white;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+    width: 100vw;
+  }
+
   &-text {
     margin-top: 0.5rem;
     max-width: 1191px;
+    position: relative;
     text-align: center;
 
     &-strong {
@@ -37,6 +49,7 @@
   &-title {
     margin: 0;
     margin: 2.75rem 0 0;
+    position: relative;
     text-align: center;
   }
 }
