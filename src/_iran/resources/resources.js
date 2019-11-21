@@ -3,23 +3,36 @@ import { buildFeed } from '../../utils/cdpFeed/cdpFeed';
 
 import './resources.scss';
 
-const sections = document.querySelectorAll( '.section' );
-const buttons = document.querySelectorAll( '.card-button' );
+// Check if mobile
+const isMobile = window.innerWidth <= 500;
 
-const sectionArray = [...sections];
-const btnArray = [...buttons];
+// Get all elements we will be acting upon
+const sections = [...document.querySelectorAll( '.resource-section' )];
+const buttons = [...document.querySelectorAll( '.resource-button' )];
 
-// Change Button Color on Click
+// Change button color on click
 const clickHandler = e => {
-  if ( e.target && e.target.id ) {
-    toggleItems( sectionArray, e.target.id, 'hidden' );
-    toggleItems( btnArray, e.target.id, 'inactive' );
+  if ( e?.target?.id ) {
+    toggleItems( sections, e.target.id, 'hidden' );
+    toggleItems( buttons, e.target.id, 'inactive' );
   }
 };
 
-btnArray.forEach( btn => {
-  btn.addEventListener( 'click', e => clickHandler( e ) );
-} );
+// Add button click event listener if buttons exist and user is not on a mobile device
+if ( !isMobile && buttons ) {
+  buttons.forEach( btn => {
+    btn.addEventListener( 'click', e => clickHandler( e ) );
+  } );
+}
+
+// Display all sections if on mobile device
+if ( isMobile && sections ) {
+  sections.forEach( section => {
+    if ( section.classList.contains( 'hidden' ) ) {
+      section.classList.remove( 'hidden' );
+    }
+  } );
+}
 
 // Adds feed of CDP content to the block
 const women = document.getElementById( 'resource-women-cdp-feed' );
