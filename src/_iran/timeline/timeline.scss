@@ -62,18 +62,20 @@
     opacity: 0;
     padding: 2.75rem 0 5rem;
     position: absolute;
-    transition: visibility 0.2s, opacity 0.2s linear;
+    transition: visibility 1s, opacity 1s linear;
     visibility: hidden;
     width: 100%;
   }
 
   &-slide-title {
     color: $white;
-    font-size: 5rem;
+    font-size: 3.8rem;
     font-weight: 800;
-    padding-left: 5vw;
-    padding-top: 3vh;
+    letter-spacing: 2px;
+    padding-top: 1.5rem;
     position: relative;
+    text-align: center;
+    text-shadow: 1px 1px 6px $greyMediumLight;
     text-transform: uppercase;
   }
 
@@ -82,7 +84,7 @@
     max-height: 75px;
     max-width: 250px;
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
   }
 
@@ -188,6 +190,22 @@
 
 @media screen and (max-width: 360px) {
   .timeline-overlay {
+    height: 170%;
+  }
+}
+
+.extra-opacity {
+  background-color: black;
+  height: 120%;
+  margin-top: -2.75rem;
+  opacity: 0.4;
+  width: 100vw;
+
+  @media screen and (max-width: 500px) {
+    height: 150%;
+  }
+
+  @media screen and (max-width: 360px) {
     height: 170%;
   }
 }

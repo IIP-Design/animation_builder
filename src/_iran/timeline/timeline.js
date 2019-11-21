@@ -20,6 +20,7 @@ const titles = [...document.getElementsByClassName( 'timeline-slide-title' )];
 // Set color values
 const activeColor = '#d01319';
 const inactiveColor = '#0a314d';
+const activeOpacity = '0.45';
 
 // Define how each timeline behaves
 const runTimeline = ( arr1, arr2, arr3 ) => {
@@ -45,7 +46,7 @@ const runTimeline = ( arr1, arr2, arr3 ) => {
     if ( el?.dataset?.photo ) {
       const activePhoto = {
         backgroundImage: `url('${el.dataset.photo}')`,
-        opacity: 0.2,
+        opacity: activeOpacity,
         visibility: 'visible'
       };
       const inactivePhoto = { opacity: 0, visibility: 'hidden' };
@@ -128,7 +129,7 @@ const hoverEffect = el => {
 
             image.setAttribute(
               'style',
-              `background-image: url('${photo}'); opacity: 0.2; visibility: visible; `
+              `background-image: url('${photo}'); opacity: ${activeOpacity}; visibility: visible; `
             );
           }
         } else {
