@@ -1,4 +1,5 @@
 @import '../style/colors.scss';
+@import '../style/icons.scss';
 @import '../utils/cdpFeed/cdpFeed.scss';
 
 // Hide to default header from stories site
@@ -23,15 +24,6 @@ h4 {
   margin: 0 auto;
   text-align: center;
   width: 100%;
-
-  // @media screen and (max-width: 768px) {
-  //   max-width: 519px;
-  //   width: 75vw;
-  // }
-
-  // @media screen and (max-width: 500px) {
-  //   width: 90vw;
-  // }
 }
 
 .video-responsive {
