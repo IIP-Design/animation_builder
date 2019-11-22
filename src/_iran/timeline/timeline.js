@@ -14,32 +14,34 @@ const distanceFromTop = timelineSection.getBoundingClientRect().top;
 // Get all elements upons which we will be acting
 const cards = [...document.getElementsByClassName( 'timeline-card' )];
 const dots = [...document.getElementsByClassName( 'timeline-dot' )];
+const headers = [...document.getElementsByClassName( 'timeline-slide-title-mobile' )];
 const images = [...document.getElementsByClassName( 'timeline-overlay' )];
 const titles = [...document.getElementsByClassName( 'timeline-slide-title' )];
 
 // Set color values
-const activeColor = '#d01319';
-const inactiveColor = '#0a314d';
-const activeOpacity = '0.45';
+const activeColor = '#c1a783';
+const activeTextColor = '#333333';
+const inactiveColor = '#666666';
+const activeOpacity = '0.5';
 
 // Define how each timeline behaves
 const runTimeline = ( arr1, arr2, arr3 ) => {
   const activeBg = { backgroundColor: activeColor };
-  const inactiveBg = { backgroundColor: inactiveColor };
+  const inactiveBg = { backgroundColor: activeTextColor };
 
   // Initialize timelines
   const tlDots = new TimelineMax( { repeat: -1 } );
-  const tlText = new TimelineMax( { repeat: -1 } );
+  const tlHeaders = new TimelineMax( { repeat: -1 } );
   const tlPhoto = new TimelineMax( { repeat: -1 } );
 
   arr1.forEach( el => {
-    tlDots.fromTo( el, 2, inactiveBg, activeBg ).to( el, 2, inactiveBg );
+    tlDots.fromTo( el, 3.9, inactiveBg, activeBg ).to( el, 0.1, inactiveBg );
   } );
 
   arr2.forEach( el => {
-    tlText
-      .fromTo( el.children, 2, { color: inactiveColor }, { color: activeColor } )
-      .to( el.children, 2, { color: inactiveColor } );
+    tlHeaders
+      .fromTo( el, 2, { display: 'none' }, { display: 'flex' } )
+      .to( el, 2, { display: 'none' } );
   } );
 
   arr3.forEach( el => {
@@ -70,7 +72,7 @@ const playWhenAtTop = e => {
     timelineSection &&
     off >= distanceFromTop
   ) {
-    runTimeline( dots, cards, images );
+    runTimeline( dots, headers, images );
     document.removeEventListener( 'scroll', playWhenAtTop );
     document.removeEventListener( 'touchmove', playWhenAtTop );
   }
@@ -102,7 +104,9 @@ const hoverEffect = el => {
         if ( card.dataset.year === year ) {
           if ( card.children ) {
             const children = [...card.children];
-            children.forEach( child => child.setAttribute( 'style', `color: ${activeColor}` ) );
+            children.forEach( child => {
+              child.setAttribute( 'style', `color: ${activeTextColor}` );
+            } );
           }
         } else if ( card.children ) {
           const children = [...card.children];
