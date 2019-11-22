@@ -25,41 +25,47 @@ const dotFive = document.getElementById( 'slide-dot-five' );
 const dotSix = document.getElementById( 'slide-dot-six' );
 const dotSeven = document.getElementById( 'slide-dot-seven' );
 
+const controller = new ScrollMagic.Controller();
+
+let position = 1;
+
+const setPosition = pos => {
+  position = pos;
+};
+
 const wipe = new TimelineLite()
-  .add( 'slide-dot-one', '+=1' )
   .set( dotOne, { background: '#fff' }, '0' )
+  .call( setPosition, [1] )
 
   .fromTo( slideTwo, 2, { xPercent: 100 }, { xPercent: 0, ease: Linear.easeNone }, '+=1' )
   .set( dotOne, { background: 'none' }, '-=0.5' )
   .set( dotTwo, { background: '#fff' }, '-=0.5' )
-  .add( 'slide-dot-two', '+=1' )
+  .call( setPosition, [2] )
 
   .fromTo( slideThree, 2, { xPercent: 100 }, { xPercent: 0, ease: Linear.easeNone }, '+=1' )
   .set( dotTwo, { background: 'none' }, '-=0.5' )
   .set( dotThree, { background: '#fff' }, '-=0.5' )
-  .add( 'slide-dot-three' )
+  .call( setPosition, [3] )
 
   .fromTo( slideFour, 2, { xPercent: 100 }, { xPercent: 0, ease: Linear.easeNone }, '+=1' )
   .set( dotThree, { background: 'none' }, '-=0.5' )
   .set( dotFour, { background: '#fff' }, '-=0.5' )
-  .add( 'slide-dot-four' )
+  .call( setPosition, [4] )
 
   .fromTo( slideFive, 2, { xPercent: 100 }, { xPercent: 0, ease: Linear.easeNone }, '+=1' )
   .set( dotFour, { background: 'none' }, '-=0.5' )
   .set( dotFive, { background: '#fff' }, '-=0.5' )
-  .add( 'slide-dot-five', '+=1' )
+  .call( setPosition, [5] )
 
   .fromTo( slideSix, 2, { xPercent: 100 }, { xPercent: 0, ease: Linear.easeNone }, '+=1' )
   .set( dotFive, { background: 'none' }, '-=0.5' )
   .set( dotSix, { background: '#fff' }, '-=0.5' )
-  .add( 'slide-dot-six', '+=1' )
+  .call( setPosition, [6] )
 
   .fromTo( slideSeven, 2, { xPercent: 100 }, { xPercent: 0, ease: Linear.easeNone }, '+=1' )
   .set( dotSix, { background: 'none' }, '-=0.5' )
   .set( dotSeven, { background: '#fff' }, '-=0.5' )
-  .add( 'slide-dot-seven', '+=1' );
-
-const controller = new ScrollMagic.Controller();
+  .call( setPosition, [7] );
 
 if ( trigger && slideTwo && slideThree && slideFour && slideFive && slideSix && slideSeven ) {
   new ScrollMagic.Scene( {
@@ -72,10 +78,23 @@ if ( trigger && slideTwo && slideThree && slideFour && slideFive && slideSix && 
     .addTo( controller );
 }
 
-// const updateProgress = e => {
-//   wipe.play( e.target.id, false );
-// };
+const updateProgress = e => {
+  const clickedOn = e?.target?.dataset?.number ? Number( e.target.dataset.number ) : '';
+  const currentPosition = controller.info().scrollPos;
+  const fullSlideScroll = controller.info().size;
+  const newOffset = clickedOn - position;
+  const pixels = newOffset * fullSlideScroll;
+  const scrollAmount = currentPosition + 1.7 * pixels;
 
-// dots.forEach( dot => {
-//   dot.addEventListener( 'click', e => updateProgress( e ) );
-// } );
+  if ( clickedOn !== position ) {
+    controller.scrollTo( scrollAmount );
+  }
+
+  setPosition( clickedOn );
+};
+
+if ( dots ) {
+  dots.forEach( dot => {
+    dot.addEventListener( 'click', e => updateProgress( e ) );
+  } );
+}
