@@ -243,15 +243,19 @@
       padding: 3rem 0;
     }
 
+    &-slide-title-mobile {
+      font-size: 1.5rem;
+    }
+
     &-overlay {
-      height: 150%;
+      height: 170%;
     }
   }
 }
 
 @media screen and (max-width: 360px) {
   .timeline-overlay {
-    height: 170%;
+    height: 200%;
   }
 }
 
@@ -263,10 +267,10 @@
   width: 100vw;
 
   @media screen and (max-width: 500px) {
-    height: 150%;
+    height: 170%;
   }
 
   @media screen and (max-width: 360px) {
-    height: 170%;
+    height: 200%;
   }
 }

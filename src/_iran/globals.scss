@@ -12,11 +12,12 @@
   display: none !important;
 }
 
+// Override theme header settings
 h1,
 h2,
 h3,
 h4 {
-  font-weight: bold;
+  font-weight: bold !important;
 }
 
 //Responsive Video Containers
