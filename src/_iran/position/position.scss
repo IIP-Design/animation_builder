@@ -28,7 +28,7 @@
   }
 
   &-text {
-    margin-top: 0.5rem;
+    margin: 0.5rem 1rem 0;
     max-width: 1191px;
     position: relative;
     text-align: center;
@@ -37,7 +37,7 @@
       font-size: 1.5rem;
       font-weight: bold;
       line-height: 1.5;
-      margin: 1rem 0;
+      margin: 2rem 0 1rem;
     }
 
     &-normal {

@@ -4,7 +4,7 @@
   background-color: $white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
   margin: 2.5rem 0;
-  max-width: 1350px;
+  max-width: 1280px;
   width: 90vw;
 
   &-bg {
@@ -107,7 +107,6 @@
     border-bottom: 1px solid $greyLight;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
   }
 
