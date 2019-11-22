@@ -66,10 +66,15 @@
   .stats {
     &-array {
       flex-direction: column;
+      padding: 2rem 0;
     }
 
     &-box-bg {
       padding-bottom: 1rem;
+    }
+
+    &-title {
+      padding-top: 2rem;
     }
   }
 
