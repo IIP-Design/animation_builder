@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "node ./config/cli/prod.js",
+    "deploy": "node ./config/cli/deploy.js",
     "dev": "node ./config/cli/dev.js"
   },
   "browserslist": [

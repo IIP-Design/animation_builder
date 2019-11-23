@@ -1,34 +1,25 @@
 const inquirer = require( 'inquirer' );
 const shell = require( 'shelljs' );
 
-const { choices } = require( './options' );
+const { sites } = require( './options' );
+const { nameConversion } = require( './helpers' );
 
 const question = [
   {
-    choices,
+    choices: sites,
     filter: val => {
       return val;
     },
     message: 'Which page would you like to build?',
-    name: 'page',
+    name: 'site',
     type: 'list'
   }
 ];
 
 inquirer.prompt( question ).then( answer => {
-  console.log( `\nCompiling the ${answer.page} bundles...\n` );
+  const site = nameConversion( answer.site );
 
-  switch ( answer.page ) {
-    case 'Example':
-      shell.exec( 'webpack --color --config config/init.js --env example --mode production' );
-      break;
-    case 'Iran':
-      shell.exec( 'webpack --color --config config/init.js --env iran --mode production' );
-      break;
-    case '5G':
-      shell.exec( 'webpack --color --config config/init.js --env fiveg --mode production' );
-      break;
-    default:
-      console.log( 'Sorry, there is no dev build set up for that page.\n' );
-  }
+  console.log( `\nCompiling the ${site} bundles...\n` );
+
+  shell.exec( `webpack --color --config config/init.js --env ${site} --mode production` );
 } );
