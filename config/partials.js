@@ -2,7 +2,7 @@ const path = require( 'path' );
 const fs = require( 'fs' );
 
 const examplePartials = require( '../src/_example/partials' );
-const fiveGPartials = require( '../src/_5g/partials' );
+const fivegPartials = require( '../src/_5g/partials' );
 const iranPartials = require( '../src/_iran/partials' );
 
 // Gets the root directory for the application
@@ -23,6 +23,6 @@ const getPartialsArr = partials =>
 // Export all partials
 module.exports = {
   example: getPartialsArr( examplePartials ),
-  fiveG: getPartialsArr( fiveGPartials ),
+  fiveg: getPartialsArr( fivegPartials ),
   iran: getPartialsArr( iranPartials )
 };

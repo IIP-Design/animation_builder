@@ -20,13 +20,19 @@ inquirer.prompt( question ).then( answer => {
 
   switch ( answer.page ) {
     case 'Example':
-      shell.exec( 'webpack-dev-server --env dev --config config/pages/example.js --color --open' );
+      shell.exec(
+        'webpack-dev-server --color --config config/init.js --env example --mode development --open'
+      );
       break;
     case 'Iran':
-      shell.exec( 'webpack-dev-server --env dev --config config/pages/iran.js --color --open' );
+      shell.exec(
+        'webpack-dev-server --color --config config/init.js --env iran --mode development --open'
+      );
       break;
     case '5G':
-      shell.exec( 'webpack-dev-server --env dev --config config/pages/fiveG.js --color --open' );
+      shell.exec(
+        'webpack-dev-server --color --config config/init.js --env fiveg --mode development --open'
+      );
       break;
     default:
       console.log( 'Sorry, there is no dev build set up for that page.\n' );

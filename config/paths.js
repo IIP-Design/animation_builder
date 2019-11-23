@@ -15,6 +15,7 @@ module.exports = {
   appPackage: resolveApp( 'package.json' ),
   appSrc: resolveApp( 'src' ),
   exampleIndex: resolveApp( 'src/_example/index.js' ),
-  fiveGIndex: resolveApp( 'src/_5g/index.js' ),
-  iranIndex: resolveApp( 'src/_iran/index.js' )
+  fivegIndex: resolveApp( 'src/_5g/index.js' ),
+  iranIndex: resolveApp( 'src/_iran/index.js' ),
+  justTheHTML: resolveApp( 'static/html.html' )
 };
