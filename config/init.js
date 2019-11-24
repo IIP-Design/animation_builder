@@ -4,23 +4,9 @@ const merge = require( 'webpack-merge' );
 const devConfig = require( './webpack.dev' );
 const prodConfig = require( './webpack.prod' );
 
-// Pass environment name to webpack config
-const exampleConfig = require( './webpack.common' )( 'example' );
-const fivegConfig = require( './webpack.common' )( 'fiveg' );
-const iranConfig = require( './webpack.common' )( 'iran' );
-
 module.exports = ( env, argv ) => {
-  let baseConfig;
-
-  if ( env === 'example' ) {
-    baseConfig = exampleConfig;
-  } else if ( env === 'fiveg' ) {
-    baseConfig = fivegConfig;
-  } else if ( env === 'iran' ) {
-    baseConfig = iranConfig;
-  } else {
-    console.log( 'No configuration available for that site.' );
-  }
+  // Pass environment name to webpack config
+  const baseConfig = require( './webpack.common' )( env ); // eslint-disable-line global-require
 
   if ( argv.mode === 'development' ) {
     return merge( baseConfig, devConfig );

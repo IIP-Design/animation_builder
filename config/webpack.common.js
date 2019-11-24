@@ -5,12 +5,11 @@ const partials = require( './partials' );
 const paths = require( './paths' );
 
 module.exports = site => {
-  const sitePartial = partials[site].join( '' );
-  const index = `${site}Index`;
+  const sitePartial = partials.sitePartials[site].join( '' );
 
   const config = {
     entry: {
-      [site]: paths[index]
+      [site]: paths.siteIndices[site]
     },
     module: {
       rules: [

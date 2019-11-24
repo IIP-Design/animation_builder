@@ -36,7 +36,7 @@ inquirer.prompt( questions ).then( answers => {
   // Run production build
   shell.exec( `webpack --color --config config/init.js --env ${site} --mode production` );
 
-  // Sync S3 bucket
+  // Sync appropriate S3 bucket
   shell.exec(
     `aws s3 sync ./dist/${site} s3://${bucket}/microsites/${site} --delete --exclude "*.html"`
   );
