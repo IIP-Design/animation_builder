@@ -2,7 +2,7 @@ const inquirer = require( 'inquirer' );
 const shell = require( 'shelljs' );
 
 const { buckets, sites } = require( './options' );
-const { bucketConversion, nameConversion } = require( './helpers' );
+const { bucketConversion, getDateString, nameConversion } = require( './helpers' );
 
 const questions = [
   {
@@ -28,6 +28,7 @@ const questions = [
 inquirer.prompt( questions ).then( answers => {
   const bucket = bucketConversion( answers.bucket );
   const site = nameConversion( answers.site );
+  const s3 = `s3://${bucket}/microsites/${site}`;
 
   console.log(
     `\nCompiling the ${site} bundles and uploading files to AWS S3 bucket ${bucket}...\n`
@@ -36,8 +37,9 @@ inquirer.prompt( questions ).then( answers => {
   // Run production build
   shell.exec( `webpack --color --config config/init.js --env ${site} --mode production` );
 
-  // Sync appropriate S3 bucket
-  shell.exec(
-    `aws s3 sync ./dist/${site} s3://${bucket}/microsites/${site} --delete --exclude "*.html"`
-  );
+  // Copy previous build into date-based archive directory
+  shell.exec( `aws s3 cp ${s3}/live ${s3}/archive/${getDateString()} --recursive` );
+
+  // Sync live S3 bucket
+  shell.exec( `aws s3 sync ./dist/${site} ${s3}/live --delete --exclude "*.html"` );
 } );
