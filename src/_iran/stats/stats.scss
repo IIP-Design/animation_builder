@@ -95,11 +95,15 @@
     }
 
     &-item {
-      padding: 10px;
-      min-height: 125px;
+      padding: 0.5rem;
+      height: calc(160px + 1rem);
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      &-info {
+        width: 150px;
+      }
 
       &-percent {
         font-size: 2rem;
