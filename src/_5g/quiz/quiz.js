@@ -28,13 +28,12 @@ if ( counterContainer && counter ) {
 }
 
 // Preset properties on cards
-TweenLite.set( '.tf-card', { perspective: 400 } );
+// TweenLite.set( '.tf-card', { perspective: 400 } );
 TweenLite.set( '.back', { rotationX: 180 } );
-TweenLite.set( ['.back', '.front'], { backfaceVisibility: 'hidden' } );
 
 // Flip the card to show the answer, and then flip back
 const rotate = card => {
-  TweenLite.to( card, 3, {
+  TweenLite.to( card, 2, {
     ease: Back.easeIn,
     rotationX: -180,
     transformStyle: 'preserve-3d'

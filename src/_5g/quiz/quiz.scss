@@ -2,10 +2,13 @@
 
 .tf {
   &-bg {
+    align-items: center;
     background-color: $blueBlackPearl;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
     padding: 2.75rem 0 3rem;
     position: relative;
   }
@@ -38,8 +41,6 @@
   }
 
   &-card {
-    background-color: $white;
-    background-image: url(https://policystatic.state.gov/uploads/2019/11/wavy-bg.jpg);
     background-repeat: repeat;
     align-items: center;
     color: $black;
@@ -52,6 +53,7 @@
     text-align: center;
     text-decoration: none;
     width: 80vw;
+    z-index: 0;
 
     &-buttons > button:first-of-type {
       margin-right: 1rem;
@@ -74,6 +76,8 @@
 
     &-container {
       align-items: center;
+      background-color: $white;
+      background-image: url(https://policystatic.state.gov/uploads/2019/11/wavy-bg.jpg);
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -101,6 +105,10 @@
     &-face {
       padding: 0 3rem;
       position: absolute;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
 
       &.back {
         background-color: transparent;
@@ -131,9 +139,15 @@
 
   &-description {
     color: $white;
-    margin: 0 auto 2.7rem;
     max-width: 1191px;
     text-align: center;
+
+    &-container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0.75rem;
+    }
   }
 
   &-subtitle {
@@ -183,16 +197,17 @@
 
     &-carousel {
       display: grid;
+      grid-row-gap: 0.5rem;
       grid-template-areas:
         '. card card card .'
         '. prev status next .';
       grid-template-columns: 2rem repeat(3, 1fr) 2rem;
-      grid-template-rows: 1fr 100px;
+      grid-template-rows: 1fr 75px;
+      margin-top: 0.5rem;
 
       &-arrow {
         display: block;
         font-size: 4rem;
-        margin-bottom: 2rem;
 
         &.prev {
           grid-area: prev;
@@ -224,7 +239,6 @@
       color: $white;
       font-size: 1rem;
       margin: 0;
-      padding: 0 0 1rem;
     }
   }
 }
@@ -234,6 +248,17 @@
     &-card {
       font-size: 1rem;
       width: 80vw;
+
+      &-content {
+        > button {
+          margin-bottom: 2rem;
+        }
+
+        > p {
+          margin-top: 2rem;
+          font-size: 1.1rem;
+        }
+      }
 
       &-face {
         padding: 2rem 1rem;
