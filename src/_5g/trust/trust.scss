@@ -3,6 +3,8 @@
 .trust {
   &-bg {
     align-items: center;
+    background-color: $white;
+    background-image: url('https://policystatic.state.gov/uploads/2019/11/wavy-bg.jpg');
     display: flex;
     flex-direction: row;
     justify-content: center;
