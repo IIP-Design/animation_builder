@@ -1,0 +1,26 @@
+@import '../../style/colors.scss';
+
+.scroll {
+  &-container {
+    z-index: 2;
+    position: fixed;
+    top: 25vh;
+    // margin-left: 10px;
+    background: $black;
+    padding: 1rem;
+  }
+
+  &-items {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    color: $white;
+    font-size: 0.8rem;
+  }
+}
+.scrolled {
+  opacity: 1;
+  color: $red;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
