@@ -119,8 +119,13 @@
       background-color: transparent;
       border: none;
       color: $white;
+      cursor: pointer;
       display: none;
       font-size: 8rem;
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 

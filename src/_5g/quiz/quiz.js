@@ -7,12 +7,28 @@ import './quiz.scss';
 // Initialize the position at the first card
 let currentItem = 1;
 
-// Get cards
+// Get cards all required elements
 const cards = [...document.querySelectorAll( '.tf-card' )];
 const cardButtons = [...document.querySelectorAll( '.tf-card-button' )];
 const navButtons = [...document.querySelectorAll( '.tf-button' )];
 
+// Keeps track of the position
+const updateCounter = ( el, number, total ) => {
+  el.innerHTML = `${number} / ${total}`;
+};
+
+// Handle counter for mobile
+const counterContainer = document.getElementById( 'tf-counter' );
+const counter = document.createElement( 'p' );
+
+// Add counter element to page
+if ( counterContainer && counter ) {
+  counterContainer.appendChild( counter );
+  updateCounter( counter, 1, cards.length );
+}
+
 // Preset properties on cards
+TweenLite.set( '.tf-card', { perspective: 400 } );
 TweenLite.set( '.back', { rotationX: 180 } );
 TweenLite.set( ['.back', '.front'], { backfaceVisibility: 'hidden' } );
 
@@ -51,7 +67,6 @@ const navigateToCard = btn => {
 
     toggleItems( cards, id, 'hidden' );
     updateNavButtons( id );
-    currentItem = Number( id );
   }
 };
 
@@ -66,6 +81,7 @@ const resetCards = btn => {
   }
 };
 
+// Manage card rotation
 if ( cardButtons && cardButtons.length > 0 ) {
   cardButtons.forEach( button => {
     // Rotate cards on click
@@ -83,6 +99,7 @@ if ( cardButtons && cardButtons.length > 0 ) {
         resetCards( btn );
         navigateToCard( btn );
         currentItem++; // eslint-disable-line no-plusplus
+        updateCounter( counter, currentItem, cards.length );
       };
 
       button.addEventListener( 'click', () => nextCard( button ) );
@@ -90,23 +107,14 @@ if ( cardButtons && cardButtons.length > 0 ) {
   } );
 }
 
-// Navigate between slides...
-
-// Handle counter for mobile
-const counterContainer = document.getElementById( 'tf-counter' );
-const counter = document.createElement( 'p' );
-
-const updateCounter = ( el, number, total ) => {
-  el.innerHTML = `${number} / ${total}`;
-};
-
-if ( counterContainer && counter ) {
-  counterContainer.appendChild( counter );
-  updateCounter( counter, 1, cards.length );
+// Navigate using buttons
+if ( navButtons ) {
+  navButtons.forEach( btn => {
+    btn.addEventListener( 'click', () => navigateToCard( btn ) );
+  } );
 }
 
-// ...Using arrows
-
+// Navigate using arrows
 const nextArrow = document.querySelector( '.tf-carousel-arrow.next' );
 const prevArrow = document.querySelector( '.tf-carousel-arrow.prev' );
 
@@ -117,36 +125,28 @@ const goTo = where => {
 
   if ( where === 'next' && !isLast ) {
     currentItem++; // eslint-disable-line no-plusplus
-    toggleItems( cards, currentItem, 'hidden' );
+    toggleItems( cards, `myth-${currentItem}`, 'hidden' );
     updateCounter( counter, currentItem, cards.length );
   } else if ( where === 'next' && isLast ) {
     currentItem = 1;
-    toggleItems( cards, currentItem, 'hidden' );
+    toggleItems( cards, `myth-${currentItem}`, 'hidden' );
     updateCounter( counter, currentItem, cards.length );
   } else if ( where === 'prev' && !isFirst ) {
     currentItem--; // eslint-disable-line no-plusplus
-    toggleItems( cards, currentItem, 'hidden' );
+    toggleItems( cards, `myth-${currentItem}`, 'hidden' );
     updateCounter( counter, currentItem, cards.length );
   } else if ( where === 'prev' && isFirst ) {
     currentItem = cards.length;
-    toggleItems( cards, currentItem, 'hidden' );
+    toggleItems( cards, `myth-${currentItem}`, 'hidden' );
     updateCounter( counter, currentItem, cards.length );
   }
 };
 
+// Add arrow event listeners
 if ( nextArrow ) {
   nextArrow.addEventListener( 'click', () => goTo( 'next' ) );
 }
 
 if ( prevArrow ) {
   prevArrow.addEventListener( 'click', () => goTo( 'prev' ) );
-}
-
-// ...Using buttons
-const buttons = [...document.querySelectorAll( '.tf-button' )];
-
-if ( buttons && buttons.length > 0 ) {
-  buttons.forEach( btn => {
-    btn.addEventListener( 'click', () => navigateToCard( btn ) );
-  } );
 }
