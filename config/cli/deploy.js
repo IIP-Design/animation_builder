@@ -41,5 +41,7 @@ inquirer.prompt( questions ).then( answers => {
   shell.exec( `aws s3 cp ${s3}/live ${s3}/archive/${getDateString()} --recursive` );
 
   // Sync live S3 bucket
-  shell.exec( `aws s3 sync ./dist/${site} ${s3}/live --delete --exclude "*.html"` );
+  shell.exec(
+    `aws s3 sync ./dist/${site} ${s3}/live --delete --exclude "*.html" --exclude "*.gitkeep"`
+  );
 } );
