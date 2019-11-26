@@ -43,7 +43,16 @@
     border-color: $red;
 
     &:hover {
-      border: 2px solid rgba(208, 19, 25, .1);
+      border: 2px solid rgba(208, 19, 25, 0.1);
+    }
+  }
+
+  &.blue {
+    color: $blueBlackPearl;
+    border-color: $blueBlackPearl;
+
+    &:hover {
+      border: 2px solid rgba($color: $blueBlackPearl, $alpha: 0.1);
     }
   }
 
@@ -52,9 +61,7 @@
   }
 }
 
-
 .arrow {
-
   &-white {
     color: $white;
   }
