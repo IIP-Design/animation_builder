@@ -10,6 +10,7 @@ let currentItem = 1;
 // Get cards
 const cards = [...document.querySelectorAll( '.tf-card' )];
 const cardButtons = [...document.querySelectorAll( '.tf-card-button' )];
+const navButtons = [...document.querySelectorAll( '.tf-button' )];
 
 // Preset properties on cards
 TweenLite.set( '.back', { rotationX: 180 } );
@@ -17,8 +18,6 @@ TweenLite.set( ['.back', '.front'], { backfaceVisibility: 'hidden' } );
 
 // Flip the card to show the answer, and then flip back
 const rotate = card => {
-  console.log( card );
-
   TweenLite.to( card, 3, {
     ease: Back.easeIn,
     rotationX: -180,
@@ -26,11 +25,33 @@ const rotate = card => {
   } );
 };
 
+// Highlight nav button corresponding to the card currently in view
+const updateNavButtons = id => {
+  if ( navButtons ) {
+    navButtons.forEach( btn => {
+      if ( btn?.dataset?.id && btn.dataset.id === id ) {
+        if ( !btn.classList.contains( 'selected' ) ) {
+          btn.classList.add( 'selected' );
+        }
+      }
+
+      if ( btn?.dataset?.id && btn.dataset.id !== id ) {
+        if ( btn.classList.contains( 'selected' ) ) {
+          btn.classList.remove( 'selected' );
+        }
+      }
+    } );
+  }
+};
+
 // Go to specified card
 const navigateToCard = btn => {
   if ( btn?.dataset?.id ) {
-    toggleItems( cards, btn.dataset.id, 'hidden' );
-    currentItem = Number( btn.dataset.id );
+    const { id } = btn.dataset;
+
+    toggleItems( cards, id, 'hidden' );
+    updateNavButtons( id );
+    currentItem = Number( id );
   }
 };
 

@@ -23,7 +23,7 @@
   &-button {
     background-color: transparent;
     background-size: cover;
-    border: 2px solid $white;
+    border: 1px solid $white;
     color: $white;
     font-size: 1rem;
     font-weight: bold;
@@ -171,8 +171,6 @@
       }
 
       &-face {
-        // height: auto;
-        // min-height: 125px;
         padding: 1rem;
         width: 100%;
       }
@@ -203,6 +201,10 @@
       &-box {
         max-width: 350px;
       }
+    }
+
+    &-description {
+      width: 90vw;
     }
   }
 
