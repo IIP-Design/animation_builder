@@ -3,24 +3,47 @@
 .scroll {
   &-container {
     z-index: 2;
-    position: fixed;
-    top: 25vh;
-    // margin-left: 10px;
-    background: $black;
-    padding: 1rem;
+    position: sticky;
+    top: 0;
+    height: 2rem;
+    //background: rgba(0, 0, 0, 0.4);
+    background: $blueBlackPearl;
+    width: 100vw;
+    // padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &-items {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    :last-child {
+      padding-right: 0;
+    }
+  }
+  &-item {
     color: $white;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    transition-property: opacity, color, font-size, font-weight;
+    -webkit-transition-property: opacity, color, font-size, font-weight;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    opacity: 0.7;
+    padding-right: 2rem;
   }
 }
 .scrolled {
   opacity: 1;
-  color: $red;
-  font-size: 1.2rem;
   font-weight: 700;
+}
+
+.show {
+  display: flex;
+}
+.hide {
+  display: none;
 }

@@ -1,20 +1,18 @@
 import ScrollMagic from 'scrollmagic';
 import './scroll.scss';
 
+// const navPos = document.getElementById('scroll-nav').getBoundingClientRect().top;
+
 const controller = new ScrollMagic.Controller();
 
 const sectionOne = document.getElementById('iran-section').clientHeight;
 const sectionTwo = document.getElementById('stats-section').clientHeight;
 const sectionThree = document.getElementById('timeline-section').clientHeight;
-const sectionFour = document.getElementById('slide-container').clientHeight;
+const sectionFour = '1100%';
 const sectionFive = document.getElementById('position-section').clientHeight;
 const sectionSix = document.getElementById('resource-section').clientHeight;
 
-console.log(sectionTwo);
-
-new ScrollMagic.Scene({ triggerElement: '#iran-section', duration: sectionOne })
-  .setClassToggle('#sec1', 'scrolled') // add class toggle
-  .addTo(controller);
+console.log(sectionOne);
 
 new ScrollMagic.Scene({
   triggerElement: '#stats-section',
