@@ -1,5 +1,6 @@
 import { TweenLite, Back } from 'gsap';
 
+import { buildFeed } from '../../utils/cdpFeed/cdpFeed';
 import { toggleItems } from '../../utils/toggle';
 
 import './quiz.scss';
@@ -148,4 +149,11 @@ if ( nextArrow ) {
 
 if ( prevArrow ) {
   prevArrow.addEventListener( 'click', () => goTo( 'prev' ) );
+}
+
+// Adds feed of CDP content to the block
+const feed = document.getElementById( 'tf-cdp-feed' );
+
+if ( feed ) {
+  buildFeed( feed );
 }
