@@ -19,7 +19,7 @@ if ( isMobile && sections ) {
 
 // Change Button Color on Click
 const clickHandler = e => {
-  if ( e.target && e.target.id ) {
+  if ( e?.target?.id ) {
     toggleItems( sections, e.target.id, 'hidden' );
     toggleItems( buttons, e.target.id, 'inactive' );
   }

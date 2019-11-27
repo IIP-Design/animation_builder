@@ -1,13 +1,11 @@
 @import '../../style/colors.scss';
 
 .briefing {
-  &-content {
-    background-color: $white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
-    margin: 2.5rem 0;
-    max-width: 1350px;
-    width: 90vw;
-  }
+  background-color: $white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
+  margin: 2.5rem 0;
+  max-width: 1350px;
+  width: 90vw;
 
   &-bg {
     align-items: center;
@@ -19,9 +17,41 @@
     position: relative;
   }
 
-  &-title {
-    padding: 2.75rem 0 0;
+  &-content {
+    margin: 1rem;
+    max-width: 832px;
     text-align: center;
+
+    &-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      padding-bottom: 2rem;
+      line-height: 1.2;
+    }
+
+    &-text {
+      > p {
+        font-size: 0.85rem;
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  &-horizontal {
+    display: none;
+    border-top: 1px solid $greyLight;
+    grid-area: hr;
+    margin: 0 auto 2rem;
+    width: calc(100% - 2rem);
+  }
+
+  &-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: $white;
+    border-bottom: 1px solid $greyLight;
   }
 
   &-subtitle {
@@ -29,22 +59,18 @@
     text-align: center;
   }
 
-  &-info-array {
+  &-title {
+    padding: 2.75rem 0 0;
+    text-align: center;
+  }
+
+  &-section-content {
     align-items: center;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 2rem;
-  }
-
-  &-array {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: $white;
-    border-bottom: 1px solid $greyLight;
   }
 
   &-button {
@@ -66,47 +92,17 @@
       outline: none;
     }
 
-    // &:hover {
-    //   cursor: pointer;
-    //   color: $gold;
-    // }
+    &:hover {
+      cursor: pointer;
+      color: $gold;
+    }
 
     &.inactive {
       border-bottom: none;
       color: $greyMedium;
-    }
-  }
 
-  &-additional-resources {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
-.info-array {
-  &-media {
-    margin: 1rem;
-
-    > img {
-      max-width: 100%;
-    }
-  }
-
-  &-text {
-    margin: 1rem;
-    text-align: center;
-
-    &-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      padding-bottom: 2rem;
-      line-height: 1.2;
-    }
-
-    &-content {
-      > p {
-        margin: 1rem 0;
+      &:hover {
+        color: $gold;
       }
     }
   }
@@ -114,10 +110,9 @@
 
 @media screen and (max-width: 768px) {
   .briefing {
-    &-array {
-      flex-direction: row;
-      flex-wrap: nowrap;
-    }
+    grid-row-gap: 2rem;
+    grid-template-columns: 1fr;
+    justify-content: center;
 
     &-bg {
       padding-bottom: 0.5rem;
@@ -128,9 +123,16 @@
     }
 
     &-content {
-      grid-row-gap: 2rem;
-      grid-template-columns: 1fr;
-      justify-content: center;
+      margin: 0 1rem;
+
+      &-text {
+        max-width: 90vw;
+      }
+    }
+
+    &-nav {
+      flex-direction: row;
+      flex-wrap: nowrap;
     }
 
     &-subtitle {
@@ -141,27 +143,11 @@
       padding-top: 2rem;
     }
   }
-
-  .info-array {
-    &-text {
-      margin: 0 1rem;
-
-      &-content {
-        max-width: 90vw;
-      }
-    }
-  }
 }
 
 @media screen and (max-width: 500px) {
-  hr.briefing-horizontal {
-    display: none;
-  }
-
   .briefing {
-    &-array {
-      display: none;
-    }
+    margin: 0;
 
     &-bg {
       padding-bottom: 3rem;
@@ -174,23 +160,26 @@
     }
 
     &-content {
-      margin: 0;
+      margin-bottom: 0;
+
+      &-title {
+        text-align: center;
+      }
     }
 
-    &-info-array {
+    &-horizontal {
+      display: block;
+    }
+
+    &-nav {
+      display: none;
+    }
+
+    &-section-content {
       margin: 1rem;
     }
-
     &-subtitle {
       margin: 1rem;
-    }
-  }
-
-  .info-array-text {
-    margin-bottom: 0;
-
-    &-title {
-      text-align: center;
     }
   }
 }
