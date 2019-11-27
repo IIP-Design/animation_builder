@@ -1,55 +1,48 @@
 import ScrollMagic from 'scrollmagic';
-import './scroll.scss';
 
-// const navPos = document.getElementById('scroll-nav').getBoundingClientRect().top;
+import './scroll.scss';
 
 const controller = new ScrollMagic.Controller();
 
-const sectionOne = document.getElementById('iran-section').clientHeight;
-const sectionTwo = document.getElementById('stats-section').clientHeight;
-const sectionThree = document.getElementById('timeline-section').clientHeight;
-const sectionFour = '1100%';
-const sectionFive = document.getElementById('position-section').clientHeight;
-const sectionSix = document.getElementById('resource-section').clientHeight;
+// Get the scroll height of a specified section
+const getSectionDuration = section => document.getElementById( section ).clientHeight;
 
-console.log(sectionOne);
-
-new ScrollMagic.Scene({
+new ScrollMagic.Scene( {
   triggerElement: '#stats-section',
-  duration: sectionTwo,
+  duration: getSectionDuration( 'stats-section' ),
   triggerHook: 'onCenter'
-})
-  .setClassToggle('#sec2', 'scrolled') // add class toggle
-  .addTo(controller);
+} )
+  .setClassToggle( '#sec2', 'scrolled' ) // add class toggle
+  .addTo( controller );
 
-new ScrollMagic.Scene({
+new ScrollMagic.Scene( {
   triggerElement: '#timeline-section',
-  duration: sectionThree,
+  duration: getSectionDuration( 'timeline-section' ),
   triggerHook: 'onCenter'
-})
-  .setClassToggle('#sec3', 'scrolled') // add class toggle
-  .addTo(controller);
+} )
+  .setClassToggle( '#sec3', 'scrolled' ) // add class toggle
+  .addTo( controller );
 
-new ScrollMagic.Scene({
+new ScrollMagic.Scene( {
   triggerElement: '#slide-container',
-  duration: sectionFour,
+  duration: '1100%', // duration of the multiple slide scroll
   triggerHook: 'onCenter'
-})
-  .setClassToggle('#sec4', 'scrolled') // add class toggle
-  .addTo(controller);
+} )
+  .setClassToggle( '#sec4', 'scrolled' ) // add class toggle
+  .addTo( controller );
 
-new ScrollMagic.Scene({
+new ScrollMagic.Scene( {
   triggerElement: '#position-section',
-  duration: sectionFive,
+  duration: getSectionDuration( 'position-section' ),
   triggerHook: 'onCenter'
-})
-  .setClassToggle('#sec5', 'scrolled') // add class toggle
-  .addTo(controller);
+} )
+  .setClassToggle( '#sec5', 'scrolled' ) // add class toggle
+  .addTo( controller );
 
-new ScrollMagic.Scene({
+new ScrollMagic.Scene( {
   triggerElement: '#resource-section',
-  duration: sectionSix,
+  duration: getSectionDuration( 'resource-section' ),
   triggerHook: 'onCenter'
-})
-  .setClassToggle('#sec6', 'scrolled') // add class toggle
-  .addTo(controller);
+} )
+  .setClassToggle( '#sec6', 'scrolled' ) // add class toggle
+  .addTo( controller );
