@@ -6,10 +6,8 @@
     position: sticky;
     top: 0;
     height: 2rem;
-    //background: rgba(0, 0, 0, 0.4);
     background: $blueBlackPearl;
     width: 100vw;
-    // padding-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,4 +44,24 @@
 }
 .hide {
   display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .scroll {
+    &-item {
+      font-size: 0.5rem;
+      padding-right: 1rem;
+    }
+    &-items {
+      justify-content: space-evenly;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .scroll {
+    &-items {
+      justify-content: center;
+    }
+  }
 }
