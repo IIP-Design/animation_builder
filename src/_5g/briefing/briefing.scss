@@ -119,6 +119,10 @@
       flex-wrap: nowrap;
     }
 
+    &-bg {
+      padding-bottom: 0.5rem;
+    }
+
     &-button {
       font-size: 1rem;
     }
@@ -131,6 +135,10 @@
 
     &-subtitle {
       margin: 1rem 1rem 0;
+    }
+
+    &-title {
+      padding-top: 2rem;
     }
   }
 
@@ -155,12 +163,18 @@
       display: none;
     }
 
-    &-content {
-      margin: 0;
-    }
-
     &-bg {
       padding-bottom: 3rem;
+    }
+
+    &-button {
+      height: 75px;
+      padding: 0;
+      width: 200px;
+    }
+
+    &-content {
+      margin: 0;
     }
 
     &-info-array {
@@ -169,12 +183,6 @@
 
     &-subtitle {
       margin: 1rem;
-    }
-
-    &-button {
-      height: 75px;
-      padding: 0;
-      width: 200px;
     }
   }
 

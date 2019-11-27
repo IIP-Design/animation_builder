@@ -33,20 +33,27 @@
 
     &-text {
       color: $white;
-      display: flex;
-      flex-direction: column;
+      display: grid;
       font-style: italic;
-      margin: 10vh 40vw 10vh 20vw;
+      grid-template-columns: 65% 35%;
+      margin: 2rem 0 4rem;
+      max-width: 1191px;
+      width: 90vw;
+
+      &-column {
+        display: flex;
+        flex-direction: column;
+
+        > p {
+          font-family: 'EB Garamond', Times, serif;
+          font-size: 1.3rem;
+          margin: 1rem 0;
+        }
+      }
 
       &-large {
         font-style: normal;
         font-weight: 500;
-      }
-
-      > p {
-        font-family: 'EB Garamond', Times, serif;
-        font-size: 1.3rem;
-        margin: 1rem 0;
       }
     }
   }
@@ -104,6 +111,10 @@
 }
 
 @media screen and (max-width: 800px) {
+  .hero-header-text {
+    grid-template-columns: 1fr;
+  }
+
   .nav-icon {
     width: 100px;
     height: 100px;
@@ -127,7 +138,7 @@
       }
 
       &-text {
-        margin: 1rem 1.5rem 3rem;
+        margin: 1rem 1.5rem 2rem;
       }
     }
   }
@@ -181,7 +192,7 @@
       }
 
       &-text {
-        margin: 1rem;
+        margin: 1rem 1rem 2rem;
       }
     }
 
@@ -208,7 +219,7 @@
     }
 
     &-header {
-      margin: 1rem;
+      margin: 2rem 1rem 1rem;
     }
   }
 }
