@@ -1,0 +1,72 @@
+@import '../../style/colors.scss';
+
+.scroll {
+  &-container {
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    height: 2rem;
+    background: $blueBlackPearl;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &-items {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+
+    :last-child {
+      padding-right: 0;
+    }
+  }
+
+  &-item {
+    color: $white;
+    font-size: 0.9rem;
+    transition-property: opacity, color, font-size, font-weight;
+    -webkit-transition-property: opacity, color, font-size, font-weight;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    opacity: 0.7;
+    padding-right: 2rem;
+  }
+}
+
+.scrolled {
+  opacity: 1;
+  font-weight: 700;
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .scroll {
+    &-item {
+      font-size: 0.5rem;
+      padding-right: 1rem;
+    }
+
+    &-items {
+      justify-content: space-evenly;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .scroll {
+    &-items {
+      justify-content: center;
+    }
+  }
+}

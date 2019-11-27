@@ -7,3 +7,4 @@ import './resources/resources';
 import './slides/slides';
 import './stats/stats';
 import './timeline/timeline';
+import './scroll/scroll';
