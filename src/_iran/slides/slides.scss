@@ -20,14 +20,12 @@
     width: 100vw;
 
     &:before {
-      background: linear-gradient(
-        to top,
-        rgba($color: black, $alpha: 0.3),
-        rgba($color: black, $alpha: 0.7) 40%,
-        rgba($color: black, $alpha: 0.8) 50%,
-        rgba($color: black, $alpha: 0.7) 60%,
-        rgba($color: black, $alpha: 0.3) 100%
-      );
+      background: linear-gradient(to top,
+          rgba($color: black, $alpha: 0.3),
+          rgba($color: black, $alpha: 0.7) 40%,
+          rgba($color: black, $alpha: 0.8) 50%,
+          rgba($color: black, $alpha: 0.7) 60%,
+          rgba($color: black, $alpha: 0.3) 100%);
       content: '';
       display: block;
       height: 100%;
@@ -58,6 +56,7 @@
       width: 100%;
     }
   }
+
   &-subtitle {
     color: $white;
     background: $red;
@@ -66,6 +65,7 @@
     text-align: center;
     margin-bottom: 1rem;
   }
+
   &-text {
     color: $white;
     font-size: 1.5rem;
@@ -73,7 +73,7 @@
     padding-bottom: 4rem;
     position: relative;
 
-    > p {
+    >p {
       font-weight: 600;
       line-height: 1.3;
       margin: 1rem;
@@ -87,7 +87,7 @@
     margin: 2.75rem -50vw 0;
     position: absolute;
     right: 50%;
-    top: 15%;
+    top: 5%;
     text-align: center;
     // z-index: 1;
   }
@@ -109,13 +109,11 @@
       max-width: 100vw;
 
       &:before {
-        background: linear-gradient(
-          to top,
-          black,
-          rgba($color: black, $alpha: 0.7) 30%,
-          rgba($color: black, $alpha: 0) 60%,
-          black 100%
-        );
+        background: linear-gradient(to top,
+            black,
+            rgba($color: black, $alpha: 0.7) 30%,
+            rgba($color: black, $alpha: 0) 60%,
+            black 100%);
       }
     }
 
@@ -123,6 +121,7 @@
       margin-top: 2rem;
       top: 5%;
     }
+
     &-subtitle {
       margin-bottom: 0;
     }
@@ -141,11 +140,13 @@
       margin: 1rem 0.5rem 4rem;
       padding: 0;
     }
+
     &-subtitle {
       font-size: 1.4rem;
       width: 75vw;
       padding: 0.5rem 1rem;
     }
+
     &-title {
       margin: 2rem -45vw 0;
     }
@@ -157,7 +158,7 @@
     &-text {
       font-size: 1rem;
 
-      > p {
+      >p {
         line-height: 1.3;
       }
     }
@@ -165,6 +166,7 @@
     &-title {
       font-size: 2.1rem;
     }
+
     &-subtitle {
       font-size: 1.2rem;
     }
@@ -173,10 +175,6 @@
 
 // Adjust mobile views of slides to bring subject of photo into focus
 @media screen and (max-width: 768px) {
-  #slide-one {
-    background-position-y: 5rem;
-  }
-
   #slide-two {
     background-position: 75% -5rem;
   }

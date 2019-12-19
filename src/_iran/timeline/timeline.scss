@@ -6,7 +6,7 @@
     padding: 0 0 3rem;
     width: 100vw;
 
-    > div:not(:first-of-type) {
+    >div:not(:first-of-type) {
       background-position: center 150%;
     }
   }
@@ -23,9 +23,9 @@
     box-shadow: 4px 4px 12px 0 rgba($color: black, $alpha: 0.2);
     display: grid;
     grid-template-areas:
-      'line line line line'
-      'bottom1 top1 bottom2 top2';
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+      'line line line line line '
+      'bottom1 top1 bottom2 top2 bottom3';
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     margin: 5rem auto 0;
     max-width: 1280px;
     position: relative;
@@ -57,7 +57,7 @@
     border: 3px solid $greyMedium;
     display: grid;
     grid-area: line;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     height: 1px;
     justify-items: center;
     margin: 2rem auto;
@@ -124,6 +124,10 @@
   grid-area: bottom2;
 }
 
+.bottom3 {
+  grid-area: bottom3;
+}
+
 #tl-persia {
   grid-area: persia;
 }
@@ -146,6 +150,10 @@
   }
 }
 
+#tl-ir3 {
+  grid-area: ir3;
+}
+
 @media screen and (max-width: 768px) {
   .timeline {
     &-bg {
@@ -163,9 +171,10 @@
         'bottom1 line persia'
         'iran line top1'
         'bottom2 line ir1'
-        'ir2 line top2';
+        'ir2 line top2'
+        'bottom3 line ir3';
       grid-template-columns: 1fr 0.25fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
       margin: 0 auto;
       padding: 5rem 0;
     }
@@ -186,7 +195,7 @@
       border-color: $black;
       align-items: center;
       display: grid;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr;
       height: 100%;
       margin: 0 1.75rem;
@@ -217,11 +226,12 @@
   }
 
   .bottom1,
-  .bottom2 {
+  .bottom2,
+  .bottom3 {
     align-items: flex-end;
     margin: 2rem 0;
 
-    > .timeline-text {
+    >.timeline-text {
       text-align: right;
     }
   }
@@ -231,7 +241,7 @@
     align-items: flex-start;
     margin: 2rem 0;
 
-    > .timeline-text {
+    >.timeline-text {
       text-align: left;
     }
   }
