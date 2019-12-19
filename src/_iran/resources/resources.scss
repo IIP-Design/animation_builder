@@ -69,7 +69,7 @@
       grid-area: content;
       margin: 0 1rem;
 
-      >.video {
+      > .video {
         align-self: center;
         width: 90%;
         margin-bottom: 2rem;
@@ -88,7 +88,7 @@
       margin: 0 1rem;
       max-width: 100%;
 
-      >.video {
+      > .video {
         align-self: center;
         grid-area: column1;
       }
@@ -98,7 +98,7 @@
       grid-area: column2;
       max-width: 100%;
 
-      >p {
+      > p {
         margin: 1rem 0;
 
         &:last-of-type {
@@ -144,7 +144,7 @@
       'feed';
     margin: 2rem 1rem 1rem;
 
-    >.cdp-feed-container {
+    > .cdp-feed-container {
       grid-area: feed;
     }
   }
@@ -171,11 +171,11 @@
 }
 
 @media screen and (max-width: 768px) {
-  .no-columns>p {
+  .no-columns > p {
     margin-bottom: 1rem;
   }
 
-  .no-columns>video {
+  .no-columns > video {
     width: 90%;
   }
 
@@ -202,7 +202,7 @@
       &-text {
         max-width: 90vw;
 
-        >p:first-of-type {
+        > p:first-of-type {
           margin-top: 0;
         }
       }
@@ -263,8 +263,12 @@
   }
 
   // Hides the final hr on mobile
-  #resource4>hr {
+  #resource4 > hr {
     display: none;
+  }
+
+  #twitter-widget-0 {
+    width: 90% !important;
   }
 }
 
