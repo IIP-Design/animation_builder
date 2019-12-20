@@ -31,6 +31,7 @@
     height: 800px;
     overflow: hidden;
     width: 100vw;
+    position: relative;
   }
 
   &-content {
@@ -89,7 +90,7 @@
   left: 50%;
   right: 50%;
   margin: 0 -50vw;
-  top: 650px;
+  bottom: 40px;
 
   &-arrow {
     color: $greyMediumLight;
@@ -186,6 +187,9 @@
   }
 
   .hero {
+    &-container {
+      height: 110vh;
+    }
     &-content {
       margin: 40vh 1rem 1rem;
     }
