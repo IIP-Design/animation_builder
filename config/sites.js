@@ -12,6 +12,12 @@ const siteData = [
     partials: '../src/_5g/partials'
   },
   {
+    index: 'src/_covid/index.js',
+    name: 'covid',
+    option: 'COVID',
+    partials: '../src/_covid/partials'
+  },
+  {
     index: 'src/_iran/index.js',
     name: 'iran',
     option: 'Iran',
