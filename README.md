@@ -1,3 +1,7 @@
+# :warning: THIS REPO HAS BEEN ARCHIVED :warning:
+
+This project has been superseded by the GPA/Lab [Styled Block Builder](https://github.com/IIP-Design/styled-block-builder) WordPress plugin. As such, this repository has been archived and is no longer being maintained. The code is preserved here as a reference.
+
 # Animation Builder
 
 This repo provides a tool with which you can develop, test, and export animated JavaScript modules. It includes an example module which we will use to illustrate how to configure your module.
@@ -6,9 +10,9 @@ This repo provides a tool with which you can develop, test, and export animated 
 
 To get started using the animation builder,
 
-1) Clone this repository: `git clone git@github.com:IIP-Design/animation_builder.git`
-2) Enter the cloned repo: `cd animation_builder`
-3) And install the dependencies: `npm install`
+1. Clone this repository: `git clone git@github.com:IIP-Design/animation_builder.git`
+2. Enter the cloned repo: `cd animation_builder`
+3. And install the dependencies: `npm install`
 
 You can now start creating and testing new modules.
 
@@ -64,7 +68,7 @@ You module will likely require some HTML to attach itself to. You can write the 
 /*    src/partials.js    */
 
 module.exports = {
-  example: '/src/example/example.html'
+  example: '/src/example/example.html',
 };
 ```
 
@@ -75,7 +79,7 @@ To use an image or other static asset in your module, save the asset file to the
 ```html
 <!--    src/examples/example.html   -->
 
-<img src='assets/example.png' />
+<img src="assets/example.png" />
 ```
 
 ## Animation Libraries
@@ -88,5 +92,5 @@ To utilize them, simply import the required parts of the libraries into the modu
 /*    src/example/example.js    */
 
 import ScrollMagic from 'scrollmagic'; // ScrollMagic
-import { TweenMax } from "gsap/TweenMax"; // GreenSock
+import { TweenMax } from 'gsap/TweenMax'; // GreenSock
 ```
